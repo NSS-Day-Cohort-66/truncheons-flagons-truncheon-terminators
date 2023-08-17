@@ -1,4 +1,4 @@
-const gameTS = {
+const transientGameState = {
   team1: {
     name: "",
     score: 0,
@@ -14,27 +14,27 @@ const gameTS = {
 };
 
 const setTeam1Name = (chosenTeam) => {
-  gameTS.team1.name = chosenTeam;
+  transientGameState.team1.name = chosenTeam;
 };
 const setTeam2Name = (chosenTeam) => {
-  gameTS.team2.name = chosenTeam;
+  transientGameState.team2.name = chosenTeam;
 };
 const setTeam3Name = (chosenTeam) => {
-  gameTS.team2.name = chosenTeam;
+  transientGameState.team2.name = chosenTeam;
 };
 
 const setTeam1Score = (scoreThisRound) => {
-  gameTS.team1.score += scoreThisRound;
+  transientGameState.team1.score += scoreThisRound;
 };
 const setTeam2Score = (scoreThisRound) => {
-  gameTS.team2.score += scoreThisRound;
+  transientGameState.team2.score += scoreThisRound;
 };
 const setTeam3Score = (scoreThisRound) => {
-  gameTS.team3.score += scoreThisRound;
+  transientGameState.team3.score += scoreThisRound;
 };
 
-const resetGameTS = () => {
-  gameTS = {
+const resetTransientGameState = () => {
+  transientGameState = {
     team1: {
       name: "",
       score: 0,

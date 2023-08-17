@@ -133,5 +133,42 @@
       "createdDate": "2023-05-12"
     }
   ],
-  "scores": []
+  "scores": [
+    {
+      "scoreId": 1,
+      "teamId": 1,
+      "teamScore": 1,
+      "gameDate": "2023-08-16"
+    },
+    {
+      "scoreId": 2,
+      "teamId": 2,
+      "teamScore": 1,
+      "gameDate": "2023-08-16"
+    },
+    {
+      "scoreId": 3,
+      "teamId": 3,
+      "teamScore": 1,
+      "gameDate": "2023-08-16"
+    },
+    {
+      "scoreId": 4,
+      "teamId": 1,
+      "teamScore": 2,
+      "gameDate": "2023-08-17"
+    },
+    {
+      "scoreId": 5,
+      "teamId": 2,
+      "teamScore": 0,
+      "gameDate": "2023-08-17"
+    },
+    {
+      "scoreId": 6,
+      "teamId": 3,
+      "teamScore": 1,
+      "gameDate": "2023-08-17"
+    }
+  ]
 }

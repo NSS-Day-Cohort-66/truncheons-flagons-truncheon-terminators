@@ -1,8 +1,10 @@
-const mainContainer = document.querySelector(".container")
+const mainContainer = document.querySelector(".container");
 
-const renderInitialHTML = async() => {
-    // mainContainer.innerHTML = await -->GameStateComponentFucntion<---
-}
+const renderInitialHTML = async () => {
+  const outputHTML = `<h1>TEST YOUR CODE</h1>
+    `;
 
-renderInitialHTML()
+  mainContainer.innerHTML = outputHTML;
+};
 
+renderInitialHTML();

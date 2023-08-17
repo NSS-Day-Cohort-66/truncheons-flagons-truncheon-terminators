@@ -1,105 +1,105 @@
 {
   "players": [
     {
-      "playerId": 1,
+      "id": 1,
       "firstName": "John",
       "lastName": "Smith",
       "countryOfOrigin": "USA",
       "teamId": 1
     },
     {
-      "playerId": 2,
+      "id": 2,
       "firstName": "Luis",
       "lastName": "García",
       "countryOfOrigin": "Mexico",
       "teamId": 1
     },
     {
-      "playerId": 3,
+      "id": 3,
       "firstName": "Sakura",
       "lastName": "Tanaka",
       "countryOfOrigin": "Japan",
       "teamId": 2
     },
     {
-      "playerId": 4,
+      "id": 4,
       "firstName": "Maria",
       "lastName": "Fernández",
       "countryOfOrigin": "Spain",
       "teamId": 2
     },
     {
-      "playerId": 5,
+      "id": 5,
       "firstName": "Ahmed",
       "lastName": "Khan",
       "countryOfOrigin": "Pakistan",
       "teamId": 3
     },
     {
-      "playerId": 6,
+      "id": 6,
       "firstName": "Leila",
       "lastName": "Abdullahi",
       "countryOfOrigin": "Nigeria",
       "teamId": 3
     },
     {
-      "playerId": 7,
+      "id": 7,
       "firstName": "Oliver",
       "lastName": "Müller",
       "countryOfOrigin": "Germany",
       "teamId": 4
     },
     {
-      "playerId": 8,
+      "id": 8,
       "firstName": "Sophie",
       "lastName": "Dubois",
       "countryOfOrigin": "France",
       "teamId": 4
     },
     {
-      "playerId": 9,
+      "id": 9,
       "firstName": "Chen",
       "lastName": "Wei",
       "countryOfOrigin": "China",
       "teamId": 5
     },
     {
-      "playerId": 10,
+      "id": 10,
       "firstName": "Yuki",
       "lastName": "Sato",
       "countryOfOrigin": "Japan",
       "teamId": 5
     },
     {
-      "playerId": 11,
+      "id": 11,
       "firstName": "Elena",
       "lastName": "Vargas",
       "countryOfOrigin": "Spain",
       "teamId": 1
     },
     {
-      "playerId": 12,
+      "id": 12,
       "firstName": "Rahul",
       "lastName": "Choudhry",
       "countryOfOrigin": "India",
       "teamId": 2
     },
     {
-      "playerId": 13,
+      "id": 13,
       "firstName": "Isabella",
       "lastName": "Ricci",
       "countryOfOrigin": "Italy",
       "teamId": 3
     },
     {
-      "playerId": 14,
+      "id": 14,
       "firstName": "Mohammed",
       "lastName": "Abdullah",
       "countryOfOrigin": "Egypt",
       "teamId": 4
     },
     {
-      "playerId": 15,
+      "id": 15,
       "firstName": "Mia",
       "lastName": "Andersson",
       "countryOfOrigin": "Sweden",
@@ -135,37 +135,37 @@
   ],
   "scores": [
     {
-      "scoreId": 1,
+      "id": 1,
       "teamId": 1,
       "teamScore": 1,
       "gameDate": "2023-08-16"
     },
     {
-      "scoreId": 2,
+      "id": 2,
       "teamId": 2,
       "teamScore": 1,
       "gameDate": "2023-08-16"
     },
     {
-      "scoreId": 3,
+      "id": 3,
       "teamId": 3,
       "teamScore": 1,
       "gameDate": "2023-08-16"
     },
     {
-      "scoreId": 4,
+      "id": 4,
       "teamId": 1,
       "teamScore": 2,
       "gameDate": "2023-08-17"
     },
     {
-      "scoreId": 5,
+      "id": 5,
       "teamId": 2,
       "teamScore": 0,
       "gameDate": "2023-08-17"
     },
     {
-      "scoreId": 6,
+      "id": 6,
       "teamId": 3,
       "teamScore": 1,
       "gameDate": "2023-08-17"

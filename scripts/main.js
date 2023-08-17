@@ -1,12 +1,17 @@
-import { leaderboardOutput } from "./Leaderboard.js";
+import { playerInput } from "./Players.js";
+import { createPlayer } from "./Buttons.js";
 
 const mainContainer = document.querySelector(".container");
 
 const leaderboardHTML = leaderboardOutput();
 
 const renderInitialHTML = async () => {
+  const playerSection = await playerInput();
+  const playerButton = await createPlayer();
+
   const outputHTML = `<h1>TEST YOUR CODE</h1>
-  ${leaderboardHTML}
+  ${playerSection}
+  ${playerButton}
     `;
 
   mainContainer.innerHTML = outputHTML;

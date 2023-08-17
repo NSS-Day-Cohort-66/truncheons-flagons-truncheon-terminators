@@ -1,5 +1,6 @@
 // Buttons for Dom
 
+import { addPlayer } from "./Players.js"
 
 
 const handleCreateTeam = (clickEvent) => {
@@ -16,7 +17,7 @@ export const createTeam = () => {
 
 const handleCreatePlayer = (clickEvent) => {
     if (clickEvent.target.id === "create_player"){
-        // button event for function
+        addPlayer()
     }
 }
 export const createPlayer = () => {

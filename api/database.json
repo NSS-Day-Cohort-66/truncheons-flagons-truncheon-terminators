@@ -1,5 +1,137 @@
 {
-    "players": [],
-    "teams": [],
+    "players": [
+        {
+            "player_id": 1,
+            "first_name": "John",
+            "last_name": "Smith",
+            "country_of_origin": "USA",
+            "team_id": 1
+        },
+        {
+            "player_id": 2,
+            "first_name": "Luis",
+            "last_name": "García",
+            "country_of_origin": "Mexico",
+            "team_id": 1
+        },
+        {
+            "player_id": 3,
+            "first_name": "Sakura",
+            "last_name": "Tanaka",
+            "country_of_origin": "Japan",
+            "team_id": 2
+        },
+        {
+            "player_id": 4,
+            "first_name": "Maria",
+            "last_name": "Fernández",
+            "country_of_origin": "Spain",
+            "team_id": 2
+        },
+        {
+            "player_id": 5,
+            "first_name": "Ahmed",
+            "last_name": "Khan",
+            "country_of_origin": "Pakistan",
+            "team_id": 3
+        },
+        {
+            "player_id": 6,
+            "first_name": "Leila",
+            "last_name": "Abdullahi",
+            "country_of_origin": "Nigeria",
+            "team_id": 3
+        },
+        {
+            "player_id": 7,
+            "first_name": "Oliver",
+            "last_name": "Müller",
+            "country_of_origin": "Germany",
+            "team_id": 4
+        },
+        {
+            "player_id": 8,
+            "first_name": "Sophie",
+            "last_name": "Dubois",
+            "country_of_origin": "France",
+            "team_id": 4
+        },
+        {
+            "player_id": 9,
+            "first_name": "Chen",
+            "last_name": "Wei",
+            "country_of_origin": "China",
+            "team_id": 5
+        },
+        {
+            "player_id": 10,
+            "first_name": "Yuki",
+            "last_name": "Sato",
+            "country_of_origin": "Japan",
+            "team_id": 5
+        },
+        {
+            "player_id": 11,
+            "first_name": "Elena",
+            "last_name": "Vargas",
+            "country_of_origin": "Spain",
+            "team_id": 1
+        },
+        {
+            "player_id": 12,
+            "first_name": "Rahul",
+            "last_name": "Choudhury",
+            "country_of_origin": "India",
+            "team_id": 2
+        },
+        {
+            "player_id": 13,
+            "first_name": "Isabella",
+            "last_name": "Ricci",
+            "country_of_origin": "Italy",
+            "team_id": 3
+        },
+        {
+            "player_id": 14,
+            "first_name": "Mohammed",
+            "last_name": "Abdallah",
+            "country_of_origin": "Egypt",
+            "team_id": 4
+        },
+        {
+            "player_id": 15,
+            "first_name": "Mia",
+            "last_name": "Andersson",
+            "country_of_origin": "Sweden",
+            "team_id": 5
+        }
+    ],
+    "teams": [
+        {
+            "team_id": 1,
+            "name": "Red Dragons",
+            "created_date": "2023-01-15"
+        },
+        {
+            "team_id": 2,
+            "name": "Blue Tigers",
+            "created_date": "2023-02-10"
+        },
+        {
+            "team_id": 3,
+            "name": "Green Geckos",
+            "created_date": "2023-03-20"
+        },
+        {
+            "team_id": 4,
+            "name": "Yellow Scorpions",
+            "created_date": "2023-04-05"
+        },
+        {
+            "team_id": 5,
+            "name": "Purple Panthers",
+            "created_date": "2023-05-12"
+        }
+    ],
     "scores": []
 }

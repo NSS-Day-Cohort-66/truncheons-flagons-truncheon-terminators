@@ -16,7 +16,12 @@ body {
 .container__creation,
 .container__game,
 .container__leaderboard {
-  border: 2px solid black;
+  border-image-slice: 15 15 15 15;
+  border-image-width: 10px 10px 10px 10px;
+  border-image-outset: 0px 0px 0px 0px;
+  border-image-repeat: round round;
+  border-image-source: url("../assets/borderTest.png");
+  border-style: solid;
 }
 
 .container__creation {
@@ -46,6 +51,4 @@ body {
 .aside__header {
   display: flex;
   justify-content: center;
-  background-color: rgb(119, 106, 90);
-  color: whitesmoke;
 }

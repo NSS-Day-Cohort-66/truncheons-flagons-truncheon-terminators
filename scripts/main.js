@@ -4,10 +4,12 @@ import {
   renderCreationHTML,
   renderLeaderboardHTML,
   displayFinalScores,
-  displayWinner
+  displayWinner,
 } from "./GameState.js";
 
 renderInitialHTML();
+
+renderGameHTML();
 
 document.addEventListener("SavePlayer", renderCreationHTML)
 document.addEventListener("SaveTeam", renderCreationHTML)

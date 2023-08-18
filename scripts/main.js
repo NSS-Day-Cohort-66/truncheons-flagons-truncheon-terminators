@@ -5,7 +5,7 @@ import { teamInput } from "./Teams.js";
 
 const mainContainer = document.querySelector(".container");
 
-// const leaderboardHTML = leaderboardOutput();
+const leaderboardHTML = await leaderboardOutput();
 
 const renderInitialHTML = async () => {
   const playerSection = await playerInput();
@@ -22,6 +22,7 @@ const renderInitialHTML = async () => {
   ${teamCreation}
   ${teamButton}
   </div>
+  ${leaderboardHTML}
     `;
 
   mainContainer.innerHTML = outputHTML;

@@ -9,4 +9,5 @@ import {
 
 renderInitialHTML();
 
-renderGameHTML(final)
+document.addEventListener("SavePlayer", renderCreationHTML)
+document.addEventListener("SaveTeam", renderCreationHTML)

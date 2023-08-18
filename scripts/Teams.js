@@ -5,9 +5,10 @@ const fetchTeams = async () => {
   return teams;
 };
 
-const teams = await fetchTeams();
+// TODO: COme back here
 
 export const teamsDropdown = async () => {
+  const teams = await fetchTeams();
   let html = `<select id="team_choice">
                 <option value="0"> Choose a team...</option>`;
   const teamsArray = teams.map((team) => {
@@ -58,10 +59,9 @@ export const addTeam = async () => {
   };
   const response = await fetch("http://localhost:8088/teams", postOptions);
 
-  const customEvent = new CustomEvent("SaveTeam")
-  document.dispatchEvent(customEvent)
+  const customEvent = new CustomEvent("SaveTeam");
+  document.dispatchEvent(customEvent);
 };
 
-
-document.addEventListener("SavePlayer", renderCreationHTML)
-document.addEventListener("SaveTeam", renderCreationHTML)
+//document.addEventListener("SavePlayer", renderCreationHTML)
+//document.addEventListener("SaveTeam", renderCreationHTML)

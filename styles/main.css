@@ -1,0 +1,44 @@
+#header_graphic {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  background-color: bisque;
+}
+
+#main__contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container__creation,
+.container__game,
+.container__leaderboard {
+  border: 2px solid black;
+}
+
+.container__creation {
+  flex: 0 0 15%;
+  display: flex;
+  flex-direction: column;
+}
+
+.creation--player {
+  flex: 0 0 50%;
+  border: 2px solid blue;
+}
+
+.creation--team {
+  flex: 0 0 50%;
+  border: 2px solid green;
+}
+
+.container__game {
+  flex: 0 0 55%;
+}
+
+.container__leaderboard {
+  flex: 0 0 15%;
+}

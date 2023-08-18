@@ -35,7 +35,7 @@ export const renderCreationHTML = async () => {
 };
 
 export const renderGameHTML = async () => {
-  const gameOutput = "${round}";
+  const gameOutput = "";
   gameContainer.innerHTML = gameOutput;
 };
 

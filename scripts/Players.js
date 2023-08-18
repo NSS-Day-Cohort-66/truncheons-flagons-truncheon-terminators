@@ -56,6 +56,8 @@ const handleTeamSelect = (event) => {
   }
 }
 
+
+
 export const playerInput = async () => {
 
   const teamsMenu = await teamsDropdown()
@@ -64,6 +66,8 @@ export const playerInput = async () => {
   document.addEventListener("change", handleLastName)
   document.addEventListener("change", handleCountry)
   document.addEventListener("change", handleTeamSelect)
+
+
 
   let playerName = `<form>
   <label for="fname">First Name</label><br>
@@ -75,7 +79,10 @@ export const playerInput = async () => {
   ${teamsMenu}
   </form>`
   return playerName
+  
+
 }
+document.addEventListener("SavePlayer", playerInput)
 
 
 
@@ -92,8 +99,11 @@ export const addPlayer = async () => {
   }
   const response = await fetch("http://localhost:8088/players", postOptions)
 
- // const customEvent = new CustomEvent("SavePlayer")
+  const customEvent = new CustomEvent("SavePlayer")
 
-//  document.dispatchEvent(customEvent)
+  document.dispatchEvent(customEvent)
 
 }
+
+
+

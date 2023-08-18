@@ -17,3 +17,56 @@ export const teamsDropdown = async () => {
   html += `</select>`;
   return html;
 };
+
+
+
+const teamState = {
+  name: "",
+  createdDate: 0
+}
+
+const setTeamName = (teamName) => {
+  teamState.name = teamName;
+  const currentDate = new Date().toISOString().substring(0, 10);
+  teamState.createdDate = currentDate
+  console.log(teamState)
+}
+
+
+const handleTeam = (event) => {
+  if ( event.target.name === "team"){
+    setTeamName(event.target.value)
+  }
+}
+
+
+export const teamInput = () => {
+
+  document.addEventListener("change", handleTeam)
+  
+
+  let teamName = `<form>
+  <label for="team">New Team Name</label><br>
+  <input type="text" placeholder="Input Name Here" id="team" name="team"><br>
+
+  </form>`
+
+  return teamName
+
+}
+
+
+
+export const addTeam = async () => {
+
+    const postOptions = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(teamState)
+    }
+    const response = await fetch("http://localhost:8088/teams", postOptions)
+
+
+}

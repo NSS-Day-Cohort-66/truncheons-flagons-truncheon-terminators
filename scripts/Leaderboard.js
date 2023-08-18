@@ -22,7 +22,7 @@ const leaderboardCompiler = async () => {
         teamScore: selected.teamScore + teamScore,
       });
     } else {
-      compiled.set(teamId, { teamName: game.team.name, teamScore: teamScore });
+      compiled.set(teamId, { teamName: game.team.name, teamScore });
     }
   });
   return compiled;

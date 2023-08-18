@@ -30,7 +30,12 @@ const displayWinner = () => {
             winner = team.name
         } 
     }
-    const winnerHTML = `Team ${winner} has won this time!`
+    let winnerHTML = ""
+    if (winner > 0){
+        winnerHTML = `Team ${winner} has won this time!`
+    } else {
+        winnerHTML = `There was no winner`
+    }
     return winnerHTML
 }
 

@@ -1,6 +1,7 @@
 import { playerInput } from "./Players.js";
 import { createPlayer, createTeam } from "./Buttons.js";
 import { teamInput } from "./Teams.js";
+import { leaderboardOutput } from "./Leaderboard.js";
 
 
 const mainContainer = document.querySelector(".container");

@@ -1,11 +1,12 @@
 // Buttons for Dom
 
 import { addPlayer } from "./Players.js"
+import { addTeam } from "./Teams.js"
 
 
 const handleCreateTeam = (clickEvent) => {
     if (clickEvent.target.id === "create_team"){
-        // Button event function
+        addTeam()
     }
 }
 export const createTeam = () => {

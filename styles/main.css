@@ -42,3 +42,10 @@ body {
 .container__leaderboard {
   flex: 0 0 15%;
 }
+
+.aside__header {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(119, 106, 90);
+  color: whitesmoke;
+}

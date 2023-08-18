@@ -57,4 +57,11 @@ export const addTeam = async () => {
     body: JSON.stringify(teamState),
   };
   const response = await fetch("http://localhost:8088/teams", postOptions);
+
+  const customEvent = new CustomEvent("SaveTeam")
+  document.dispatchEvent(customEvent)
 };
+
+
+document.addEventListener("SavePlayer", renderCreationHTML)
+document.addEventListener("SaveTeam", renderCreationHTML)

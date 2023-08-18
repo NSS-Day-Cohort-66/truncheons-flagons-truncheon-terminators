@@ -1,4 +1,4 @@
-const transientGameState = {
+export const transientGameState = {
   teams: {
     team1: {
       name: "",
@@ -34,16 +34,16 @@ const transientGameState = {
 };
 
 
-const setTeamName = (chosenTeam, team) => {
+export const setTeamName = (chosenTeam, team) => {
   transientGameState.teams[team].name = chosenTeam.name;
   transientGameState.teams[team].teamId = chosenTeam.value;
 };
 
-const setTeamScore = (scoreThisRound, team) => {
+export const setTeamScore = (scoreThisRound, team) => {
   transientGameState.teams[team].score += scoreThisRound;
 };
 
-const generateScoreCard = (team) => {
+export const generateScoreCard = (team) => {
   const currentDate = new Date().toISOString().substring(0, 10);
   transientGameState.teams[team].scoreCard.teamId = transientGameState.teams[team].teamId;
   transientGameState.teams[team].scoreCard.teamScore = transientGameState.teams[team].score;
@@ -51,7 +51,7 @@ const generateScoreCard = (team) => {
 };
 
 
-const resetTransientGameState = () => {
+export const resetTransientGameState = () => {
   for (const team in transientGameState.teams) {
     transientGameState.teams[team].name = "";
     transientGameState.teams[team].teamId = 0;
@@ -62,7 +62,7 @@ const resetTransientGameState = () => {
   }
 };
 
-const postTeamScoreCard = async (team) => {
+export const postTeamScoreCard = async (team) => {
   const postOptions = {
     method: "POST",
     headers: {

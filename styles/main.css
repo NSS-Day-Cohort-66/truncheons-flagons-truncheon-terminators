@@ -25,19 +25,29 @@ body {
 }
 
 .container__creation {
-  flex: 0 0 15%;
+  flex: 0 0 20%;
+}
+
+.createPlayerForm {
+  flex: 0 0 20%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
 }
 
 .creation--player {
   flex: 0 0 50%;
-  border: 2px solid blue;
 }
 
-.creation--team {
-  flex: 0 0 50%;
-  border: 2px solid green;
+.createTeamForm {
+  flex: 0 0 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
 }
 
 .container__game {
@@ -51,4 +61,8 @@ body {
 .aside__header {
   display: flex;
   justify-content: center;
+}
+
+.player__button {
+  padding: 2em;
 }

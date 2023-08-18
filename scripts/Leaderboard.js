@@ -5,49 +5,34 @@ const fetchScores = async () => {
   return scores;
 };
 
-const fetchTeams = async () => {
-  const teams = await fetch("http://localhost:8088/teams").then((res) =>
-    res.json()
-  );
-  return teams;
-};
-
 const leaderboard = await fetchScores();
 
 const leaderboardCompiler = async () => {
+  // ? Sets a new map to hold the compiled data of score totals, iterates through the leaderboard to set scores
   const compiled = new Map();
-
   leaderboard.forEach((game) => {
-    const { teamId, teamScore } = game;
+    const { teamId, teamName, teamScore } = game;
 
+    // ? Checks to see if compiled already has the team in the map, if not, creates a new object for that team.
+    // ? If the team already exists, adds that game score to the total
     if (compiled.has(teamId)) {
-      compiled.set(teamId, compiled.get(teamId) + teamScore);
+      const selected = compiled.get(teamId);
+      compiled.set(teamId, {
+        teamName: selected.teamName,
+        teamScore: selected.teamScore + teamScore,
+      });
     } else {
-      compiled.set(teamId, teamScore);
+      compiled.set(teamId, { teamName: game.team.name, teamScore: teamScore });
     }
   });
-
   return compiled;
 };
 
-// const nameCompiler = async () => {
-//   const names = await fetchTeams();
-//   const ranked = await leaderboardCompiler();
-//   const rankedArray = [...ranked];
-//   const rankedNames = rankedArray.map((rank) => {
-//     names.filter((team) => rank[0] === team.id);
-//   });
-//   debugger;
-//   return rankedNames;
-// };
-
-// nameCompiler();
-
 export const leaderboardOutput = async () => {
   let ranked = await leaderboardCompiler();
-  const sorted = [...ranked].sort((a, b) => b[1] - a[1]);
+  const sorted = [...ranked].sort((a, b) => b[1].teamScore - a[1].teamScore);
   let output = sorted.map((rank) => {
-    return `${rank[0]} scored ${rank[1]}`;
+    return `${rank[1].teamName} scored ${rank[1].teamScore}`;
   });
   return output;
 };

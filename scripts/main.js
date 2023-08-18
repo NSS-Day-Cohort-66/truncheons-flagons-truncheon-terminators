@@ -10,3 +10,6 @@ import {
 renderInitialHTML();
 
 renderGameHTML();
+
+document.addEventListener("SavePlayer", renderCreationHTML)
+document.addEventListener("SaveTeam", renderCreationHTML)

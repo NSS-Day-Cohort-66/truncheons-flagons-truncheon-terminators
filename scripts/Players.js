@@ -83,7 +83,8 @@ export const addPlayer = async () => {
   };
   const response = await fetch("http://localhost:8088/players", postOptions);
 
-  // const customEvent = new CustomEvent("SavePlayer")
+  const customEvent = new CustomEvent("SavePlayer")
 
-  //  document.dispatchEvent(customEvent)
-};
+  document.dispatchEvent(customEvent)
+
+}

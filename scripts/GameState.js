@@ -8,20 +8,18 @@ import {
 } from "./currentGame.js";
 import { playerInput } from "./Players.js";
 import { createPlayer, createTeam } from "./Buttons.js";
-import { teamInput, teamsDropdown } from "./Teams.js";
+import { teamInput } from "./Teams.js";
 import { leaderboardOutput } from "./Leaderboard.js";
-
-const leaderboardHTML = await leaderboardOutput();
-const playerSection = await playerInput();
-const playerButton = await createPlayer();
-const teamCreation = teamInput();
-const teamButton = createTeam();
 
 const creationContainer = document.querySelector(".container__creation");
 const gameContainer = document.querySelector(".container__game");
 const leaderboardContainer = document.querySelector(".container__leaderboard");
 
 export const renderCreationHTML = async () => {
+   const playerSection = await playerInput();
+  const playerButton = await createPlayer();
+  const teamCreation = await teamInput();
+  const teamButton = await createTeam();
   const outputHTML = `
   <div class="createPlayerForm">
     ${playerSection}
@@ -40,6 +38,7 @@ export const renderGameHTML = async () => {
 };
 
 export const renderLeaderboardHTML = async () => {
+  const leaderboardHTML = await leaderboardOutput();
   const outputHTML = `
   ${leaderboardHTML}`;
 

@@ -3,18 +3,18 @@ import { createPlayer, createTeam } from "./Buttons.js";
 import { teamInput } from "./Teams.js";
 import { leaderboardOutput } from "./Leaderboard.js";
 
-
-const mainContainer = document.querySelector(".container");
-
+const playerSection = await playerInput();
+const playerButton = await createPlayer();
 const leaderboardHTML = await leaderboardOutput();
+const teamCreation = teamInput();
+const teamButton = createTeam();
 
-const renderInitialHTML = async () => {
-  const playerSection = await playerInput();
-  const playerButton = await createPlayer();
-  const teamCreation =  teamInput();
-  const teamButton = createTeam()
+const creationContainer = document.querySelector(".container__creation");
+const gameContainer = document.querySelector(".container__game");
+const leaderboardContainer = document.querySelector(".container__leaderboard");
 
-  const outputHTML = `<h1>TEST YOUR CODE</h1>
+const renderCreationHTML = async () => {
+  const outputHTML = `
   <div>
   ${playerSection}
   ${playerButton}
@@ -23,10 +23,26 @@ const renderInitialHTML = async () => {
   ${teamCreation}
   ${teamButton}
   </div>
-  ${leaderboardHTML}
     `;
 
-  mainContainer.innerHTML = outputHTML;
+  creationContainer.innerHTML = outputHTML;
+};
+
+const renderGameHTML = async () => {
+  return;
+};
+
+const renderLeaderboardHTML = async () => {
+  const outputHTML = `
+  ${leaderboardHTML}`;
+
+  leaderboardContainer.innerHTML = outputHTML;
+};
+
+const renderInitialHTML = async () => {
+  await renderCreationHTML();
+  await renderGameHTML();
+  await renderLeaderboardHTML();
 };
 
 renderInitialHTML();

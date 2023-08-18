@@ -1,3 +1,5 @@
+import { displayWinner, displayFinalScores } from "./GameState.js"
+
 const teamSelect = ""
 
 const round1 = ""

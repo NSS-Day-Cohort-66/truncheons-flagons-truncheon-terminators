@@ -1,4 +1,5 @@
 import { displayWinner, displayFinalScores } from "./GameState.js"
+import { transientGameState } from "./currentGame.js"
 
 const teamSelect = ""
 

@@ -16,7 +16,7 @@ const gameContainer = document.querySelector(".container__game");
 const leaderboardContainer = document.querySelector(".container__leaderboard");
 
 export const renderCreationHTML = async () => {
-   const playerSection = await playerInput();
+  const playerSection = await playerInput();
   const playerButton = await createPlayer();
   const teamCreation = await teamInput();
   const teamButton = await createTeam();

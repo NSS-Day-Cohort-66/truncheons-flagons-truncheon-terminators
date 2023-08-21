@@ -1,6 +1,8 @@
 import { displayWinner, displayFinalScores } from "./GameState.js";
 import {
-  setTeamName,
+  setTeam1Name,
+  setTeam2Name,
+  setTeam3Name,
   setTeamScore,
   transientGameState,
 } from "./currentGame.js";
@@ -18,14 +20,13 @@ export const initial = () => {
 };
 
 export const teamSelect = async () => {
-  document.addEventListener("change", handleTeam1Selection);
-  document.addEventListener("change", handleTeam2Selection);
-  document.addEventListener("change", handleTeam3Selection);
-
   const team1DropDownHTML = await team1Dropdown();
   const team2DropDownHTML = await team2Dropdown();
   const team3DropDownHTML = await team3Dropdown();
   const handleRound1 = await roundRender1();
+  document.addEventListener("change", handleTeam1Selection);
+  document.addEventListener("change", handleTeam2Selection);
+  document.addEventListener("change", handleTeam3Selection);
   return `<h2>Select Your Teams</h2>
     <div>Team 1${team1DropDownHTML}</div>
     <img src="../assets/vs.png" />
@@ -37,21 +38,20 @@ export const teamSelect = async () => {
 };
 
 const handleTeam1Selection = (changeEvent) => {
-  if (changeEvent.target.id === "team1_choice") {
-    setTeamName(changeEvent.target.dataset.name, transientGameState.teams.team1);
-    console.log(transientGameState)
+   if (changeEvent.target.id === "team1_choice") {
+    setTeam1Name(changeEvent.target, transientGameState.teams.team1);
   }
 };
+
 const handleTeam2Selection = (changeEvent) => {
   if (changeEvent.target.id === "team2_choice") {
-    setTeamName(changeEvent.target.name, transientGameState.teams.team2);
-    console.log(transientGameState)
+    setTeam2Name(changeEvent.target, transientGameState.teams.team2);
   }
 };
+
 const handleTeam3Selection = (changeEvent) => {
   if (changeEvent.target.id === "team3_choice") {
-    setTeamName(changeEvent.target.name, transientGameState.teams.team3);
-    console.log(transientGameState)
+    setTeam3Name(changeEvent.target, transientGameState.teams.team3);
   }
 };
 

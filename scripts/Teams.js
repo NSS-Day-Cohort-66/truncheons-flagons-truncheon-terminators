@@ -1,4 +1,4 @@
-const fetchTeams = async () => {
+export const fetchTeams = async () => {
   const teams = await fetch("http://localhost:8088/teams").then((res) =>
     res.json()
   );
@@ -18,17 +18,19 @@ export const teamsDropdown = async () => {
   html += `</select>`;
   return html;
 };
+
 export const team1Dropdown = async () => {
   const teams = await fetchTeams();
   let html = `<select id="team1_choice">
                 <option value="0"> Choose a team...</option>`;
   const teamsArray = teams.map((team) => {
-    return `<option id="team" data-name="${team.name}" value="${team.id}"> ${team.name} </option>`;
+    return `<option id="team1" data-name="${team.name}" value="${team.id}"> ${team.name} </option>`;
   });
   html += teamsArray.join("");
   html += `</select>`;
   return html;
 };
+
 export const team2Dropdown = async () => {
   const teams = await fetchTeams();
   let html = `<select id="team2_choice">

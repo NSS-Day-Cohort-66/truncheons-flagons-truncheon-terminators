@@ -76,3 +76,12 @@ export const roundRender1 = () => {
     return `<button class="round1" id="round1">Round 1!</button>`
 }
 
+const handleRound1Score = (clickEvent) => {
+    if( clickEvent.target.id === "round1Score"){
+        //const round1Score = round2()
+    }
+}
+export const roundScore = () => {
+    document.addEventListener("click", handleRound1Score )
+    return `<button class="round1Score" id="round1Score">Round 1 Scores!!</button>`
+}

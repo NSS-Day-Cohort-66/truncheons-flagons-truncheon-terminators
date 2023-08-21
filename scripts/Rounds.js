@@ -1,9 +1,11 @@
 import { displayWinner, displayFinalScores } from "./GameState.js"
 import { transientGameState } from "./currentGame.js"
 import { teamsDropdown } from "./Teams.js"
+import { startGame } from "./Buttons.js"
 
 export const initial = () => {
-    return "Welcome to the game"
+    const startGameButton = startGame()
+    return `${startGameButton}`
 }
 
 export const teamSelect = async() => {

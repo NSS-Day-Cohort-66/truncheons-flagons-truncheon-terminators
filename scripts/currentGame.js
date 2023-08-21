@@ -1,3 +1,5 @@
+import { fetchTeams } from "./Teams.js";
+
 export const transientGameState = {
   teams: {
     team1: {
@@ -34,11 +36,40 @@ export const transientGameState = {
 };
 
 
-
-export const setTeamName = (chosenTeam, team) => {
-  transientGameState.teams[team].name = chosenTeam.name;
-  transientGameState.teams[team].teamId = chosenTeam.value;
+export const setTeam1Name = async (chosenTeam) => {
+  const teams = await fetchTeams()
+  const teamId = parseInt(chosenTeam.value)
+  transientGameState.teams.team1.teamId = teamId;
+  for (const team of teams){
+    if (team.id === teamId){
+      transientGameState.teams.team1.name = team.name
+    }
+  }
+  console.log(transientGameState)
 };
+export const setTeam2Name = async (chosenTeam) => {
+  const teams = await fetchTeams()
+  const teamId = parseInt(chosenTeam.value)
+  transientGameState.teams.team2.teamId = teamId;
+  for (const team of teams){
+    if (team.id === teamId){
+      transientGameState.teams.team2.name = team.name
+    }
+  }
+  console.log(transientGameState)
+};
+export const setTeam3Name = async (chosenTeam) => {
+  const teams = await fetchTeams()
+  const teamId = parseInt(chosenTeam.value)
+  transientGameState.teams.team3.teamId = teamId;
+  for (const team of teams){
+    if (team.id === teamId){
+      transientGameState.teams.team3.name = team.name
+    }
+  }
+  console.log(transientGameState)
+};
+
 
 export const setTeamScore = (scoreThisRound, team) => {
   transientGameState.teams[team].score += scoreThisRound;

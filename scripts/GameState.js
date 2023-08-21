@@ -1,5 +1,5 @@
 import {
-  setTeamName,
+  setTeam1Name,
   setTeamScore,
   transientGameState,
   resetTransientGameState,

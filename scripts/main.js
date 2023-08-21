@@ -2,9 +2,7 @@ import {
   renderInitialHTML,
   renderGameHTML,
   renderCreationHTML,
-  renderLeaderboardHTML,
-  displayFinalScores,
-  displayWinner,
+  renderLeaderboardHTML
 } from "./GameState.js";
 
 renderInitialHTML();

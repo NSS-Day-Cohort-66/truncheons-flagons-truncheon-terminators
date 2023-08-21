@@ -1,5 +1,5 @@
 // Buttons for Dom
-
+import { transientGameState } from "./currentGame.js";
 import { renderGameHTML, renderRound1 } from "./GameState.js";
 import { addPlayer } from "./Players.js";
 import { round1, teamSelect } from "./Rounds.js";
@@ -57,11 +57,23 @@ export const playAgain = () => {
 };
 
 const handleRound1 = (clickEvent) => {
+  const tGS = transientGameState.teams;
   if (clickEvent.target.id === "round1") {
-    const roundOne = round1();
-    renderRound1(roundOne);
+    if (tGS.team1 && tGS.team2 && tGS.team3) {
+      if (
+        tGS.team1.teamId !== tGS.team2.teamId &&
+        tGS.team1.teamId !== tGS.team3.teamId &&
+        tGS.team2.teamId !== tGS.team3.teamId
+      ) {
+        const roundOne = round1();
+        renderRound1(roundOne);
+      } else {
+        window.alert(`Must chose three teams, and all must be different`);
+      }
+    }
   }
 };
+
 export const roundRender1 = () => {
   document.addEventListener("click", handleRound1);
   return `<button class="round1" id="round1">Round 1!</button>`;

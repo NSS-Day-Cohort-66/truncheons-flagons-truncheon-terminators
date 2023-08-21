@@ -10,13 +10,14 @@ import { playerInput } from "./Players.js";
 import { createPlayer, createTeam } from "./Buttons.js";
 import { teamInput } from "./Teams.js";
 import { leaderboardOutput } from "./Leaderboard.js";
+import { teamSelect, initial } from "./Rounds.js";
 
 const creationContainer = document.querySelector(".container__creation");
 const gameContainer = document.querySelector(".container__game");
 const leaderboardContainer = document.querySelector(".container__leaderboard");
 
 export const renderCreationHTML = async () => {
-   const playerSection = await playerInput();
+  const playerSection = await playerInput();
   const playerButton = await createPlayer();
   const teamCreation = await teamInput();
   const teamButton = await createTeam();
@@ -32,8 +33,8 @@ export const renderCreationHTML = async () => {
   creationContainer.innerHTML = outputHTML;
 };
 
-export const renderGameHTML = async () => {
-  const gameOutput = "";
+export const renderGameHTML = async (round) => {
+  const gameOutput = await round
   gameContainer.innerHTML = gameOutput;
 };
 
@@ -46,8 +47,9 @@ export const renderLeaderboardHTML = async () => {
 };
 
 export const renderInitialHTML = async () => {
+  const initialHTML = await initial()
   await renderCreationHTML();
-  await renderGameHTML();
+  await renderGameHTML(initialHTML);
   await renderLeaderboardHTML();
 };
 

@@ -131,6 +131,16 @@
       "id": 5,
       "name": "Purple Panthers",
       "createdDate": "2023-05-12"
+    },
+    {
+      "name": "Voldemort",
+      "createdDate": "2023-08-21",
+      "id": 6
+    },
+    {
+      "name": "truncheon",
+      "createdDate": "2023-08-21",
+      "id": 7
     }
   ],
   "scores": [

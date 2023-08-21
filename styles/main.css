@@ -100,7 +100,7 @@ body {
   flex: 0 0 20%;
 }
 
-.round1__state {
+.teamSelect__state {
   display: flex;
   justify-content: space-around;
   align-items: center;

@@ -28,7 +28,7 @@ export const teamSelect = async () => {
   document.addEventListener("change", handleTeam2Selection);
   document.addEventListener("change", handleTeam3Selection);
   return `<h2>Select Your Teams</h2>
-    <div class="round1__state">
+    <div class="teamSelect__state">
       <h2>Team 1${team1DropDownHTML}</h2>
         <img class="vsImage" src="../assets/vs.png" />
       <h2>Team 2${team2DropDownHTML}</h2>
@@ -40,7 +40,7 @@ export const teamSelect = async () => {
 };
 
 const handleTeam1Selection = (changeEvent) => {
-   if (changeEvent.target.id === "team1_choice") {
+  if (changeEvent.target.id === "team1_choice") {
     setTeam1Name(changeEvent.target, transientGameState.teams.team1);
   }
 };

@@ -63,6 +63,7 @@ export const round1 = async () => {
   const games = await transientGameState;
   const round1Button = round1ScoreButton();
   let round1 = `
+      <img class="round__title" src="../assets/round1.png" />
         <section class="round1__state">
           <div class="team__rounds">
             <h2>${games.teams.team1.name}</h2>
@@ -79,7 +80,7 @@ export const round1 = async () => {
           <div class="team__rounds">
             <h2>${games.teams.team3.name}</h2>
             <h3>${games.teams.team3.score}</h3>
-            <input type="text" placeholder="Input Score..." name="score3"><br>
+            <input type="text" placeholder="Input Score..." name="score3">
           </div>
         </section>
         ${round1Button}

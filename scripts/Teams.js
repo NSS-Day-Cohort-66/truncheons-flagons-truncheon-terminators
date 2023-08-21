@@ -18,6 +18,39 @@ export const teamsDropdown = async () => {
   html += `</select>`;
   return html;
 };
+export const team1Dropdown = async () => {
+  const teams = await fetchTeams();
+  let html = `<select id="team1_choice">
+                <option value="0"> Choose a team...</option>`;
+  const teamsArray = teams.map((team) => {
+    return `<option id="team" data-name="${team.name}" value="${team.id}"> ${team.name} </option>`;
+  });
+  html += teamsArray.join("");
+  html += `</select>`;
+  return html;
+};
+export const team2Dropdown = async () => {
+  const teams = await fetchTeams();
+  let html = `<select id="team2_choice">
+                <option value="0"> Choose a team...</option>`;
+  const teamsArray = teams.map((team) => {
+    return `<option id="team" value="${team.id}"> ${team.name} </option>`;
+  });
+  html += teamsArray.join("");
+  html += `</select>`;
+  return html;
+};
+export const team3Dropdown = async () => {
+  const teams = await fetchTeams();
+  let html = `<select id="team3_choice">
+                <option value="0"> Choose a team...</option>`;
+  const teamsArray = teams.map((team) => {
+    return `<option id="team" value="${team.id}"> ${team.name} </option>`;
+  });
+  html += teamsArray.join("");
+  html += `</select>`;
+  return html;
+};
 
 const teamState = {
   name: "",

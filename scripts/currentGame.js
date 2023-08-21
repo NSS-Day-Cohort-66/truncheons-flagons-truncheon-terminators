@@ -34,6 +34,7 @@ export const transientGameState = {
 };
 
 
+
 export const setTeamName = (chosenTeam, team) => {
   transientGameState.teams[team].name = chosenTeam.name;
   transientGameState.teams[team].teamId = chosenTeam.value;

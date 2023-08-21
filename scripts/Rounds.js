@@ -3,7 +3,9 @@ import {
   setTeam1Name,
   setTeam2Name,
   setTeam3Name,
-  setTeamScore,
+  setTeam1Score,
+  setTeam2Score,
+  setTeam3Score,
   transientGameState,
 } from "./currentGame.js";
 import {
@@ -12,7 +14,7 @@ import {
   team2Dropdown,
   team3Dropdown,
 } from "./Teams.js";
-import { roundRender1, roundScore, startGame } from "./Buttons.js";
+import { roundRender1, round1ScoreButton, startGame } from "./Buttons.js";
 
 export const initial = () => {
   const startGameButton = startGame();
@@ -59,7 +61,7 @@ const handleTeam3Selection = (changeEvent) => {
 
 export const round1 = async () => {
   const games = await transientGameState;
-  const round1Button = roundScore();
+  const round1Button = round1ScoreButton();
   let round1 = `
       <img class="round__title" src="../assets/round1.png" />
         <section class="round1__state">

@@ -1,5 +1,10 @@
 // Buttons for Dom
-import { transientGameState } from "./currentGame.js";
+import {
+  transientGameState,
+  setTeam1Score,
+  setTeam2Score,
+  setTeam3Score,
+} from "./currentGame.js";
 import { renderGameHTML, renderRound1 } from "./GameState.js";
 import { addPlayer } from "./Players.js";
 import { round1, teamSelect } from "./Rounds.js";
@@ -79,12 +84,22 @@ export const roundRender1 = () => {
   return `<button class="round1" id="round1">Round 1!</button>`;
 };
 
-const handleRound1Score = (clickEvent) => {
-  if (clickEvent.target.id === "round1Score") {
-    //const round1Score = round2()
-  }
-};
-export const roundScore = () => {
+export const round1ScoreButton = () => {
   document.addEventListener("click", handleRound1Score);
-  return `<button class="round1Score" id="round1Score">Submit Scores</button>`;
+  return `<button class="round1Score" id="round1Score">Round 2</button>`;
+};
+
+const handleRound1Score = (clickEvent) => {
+  const inputElement1 = document.querySelector('input[name="score1"]');
+  const userInput1 = inputElement1.value;
+  const inputElement2 = document.querySelector('input[name="score2"]');
+  const userInput2 = inputElement2.value;
+  const inputElement3 = document.querySelector('input[name="score3"]');
+  const userInput3 = inputElement3.value;
+  if (clickEvent.target.id === "round1Score") {
+    transientGameState.teams.team1.score += parseInt(userInput1);
+    transientGameState.teams.team2.score += parseInt(userInput2);
+    transientGameState.teams.team3.score += parseInt(userInput3);
+  }
+  console.log(transientGameState);
 };

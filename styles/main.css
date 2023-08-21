@@ -107,6 +107,20 @@ body {
   text-align: center;
 }
 
+.round1__state {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.team__rounds {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .vsImage {
   width: 90px;
   height: auto;

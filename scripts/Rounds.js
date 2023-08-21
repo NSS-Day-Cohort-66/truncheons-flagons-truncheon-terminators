@@ -59,20 +59,27 @@ const handleTeam3Selection = (changeEvent) => {
 
 export const round1 = async () => {
   const games = await transientGameState;
-  const round1Button = roundScore()
-  let round1 = `<section>
-        <h2 id="${games.teams.team1.teamId}">${games.teams.team1.name}</h2>
-        <h3>Current Score</h3><br>
-        ${games.teams.team1.score}<br>
-        <input type="text" placeholder="R1 Score" name="score1">
-        <h2 id="${games.teams.team2.teamId}">${games.teams.team2.name}</h2>
-        <h3>Current Score</h3><br>
-        ${games.teams.team2.score}<br>
-        <input type="text" placeholder="R2 Score" name="score2">
-        <h2 id="${games.teams.team3.teamId}">${games.teams.team3.name}</h2>
-        <h3>Current Score</h3><br>
-        ${games.teams.team3.score}<br>
-        <input type="text" placeholder="R3 Score" name="score3"><br>
+  const round1Button = roundScore();
+  let round1 = `
+        <section class="round1__state">
+          <div class="team__rounds">
+            <h2>${games.teams.team1.name}</h2>
+            <h3>${games.teams.team1.score}</h3>
+            <input type="text" placeholder="Input Score..." name="score1">
+          </div>
+          <img class="vsImage" src="../assets/vs.png" />
+          <div class="team__rounds">
+            <h2>${games.teams.team2.name}</h2>
+            <h3>${games.teams.team2.score}</h3>
+            <input type="text" placeholder="Input Score..." name="score2">
+          </div>
+          <img class="vsImage" src="../assets/vs.png" />
+          <div class="team__rounds">
+            <h2>${games.teams.team3.name}</h2>
+            <h3>${games.teams.team3.score}</h3>
+            <input type="text" placeholder="Input Score..." name="score3"><br>
+          </div>
+        </section>
         ${round1Button}
         `;
 

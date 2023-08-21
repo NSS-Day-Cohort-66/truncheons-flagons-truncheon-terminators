@@ -5,6 +5,8 @@
 
 body {
   background-color: bisque;
+  background-image: url("../assets/woodBackground.png");
+  background-repeat: repeat-y;
 }
 
 #main__contents {
@@ -13,31 +15,60 @@ body {
   align-items: center;
 }
 
+.metal__back {
+  border-image-slice: 15 15 15 15;
+  border-image-width: 16px 16px 16px 16px;
+  border-image-outset: 12px 12px 12px 12px;
+  border-image-repeat: round round;
+  border-image-source: url("../assets/metalBorder.png");
+  border-style: solid;
+  background-color: #595959;
+  background-clip: border-box;
+  padding: 1em;
+  margin: 1em;
+  filter: drop-shadow(6px 10px 2px rgb(9, 9, 9));
+}
+
 .container__creation,
 .container__game,
 .container__leaderboard {
-  border-image-slice: 15 15 15 15;
-  border-image-width: 10px 10px 10px 10px;
-  border-image-outset: 0px 0px 0px 0px;
+  border-image-slice: 36 36 36 36;
+  border-image-width: 36px 36px 36px 36px;
+  border-image-outset: 12px 12px 12px 12px;
   border-image-repeat: round round;
-  border-image-source: url("../assets/borderTest.png");
+  border-image-source: url("../assets/scrollBorder.png");
   border-style: solid;
+  background-color: #bbaf7e;
+  background-size: cover;
+  background-clip: content-box;
+  padding: 1em;
+  filter: drop-shadow(6px 10px 2px rgb(37, 37, 37));
 }
 
 .container__creation {
-  flex: 0 0 15%;
+  flex: 0 0 20%;
+}
+
+.createPlayerForm {
+  flex: 0 0 20%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4em;
 }
 
 .creation--player {
   flex: 0 0 50%;
-  border: 2px solid blue;
 }
 
-.creation--team {
-  flex: 0 0 50%;
-  border: 2px solid green;
+.createTeamForm {
+  flex: 0 0 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
 }
 
 .container__game {
@@ -51,4 +82,8 @@ body {
 .aside__header {
   display: flex;
   justify-content: center;
+}
+
+.player__button {
+  padding: 2em;
 }

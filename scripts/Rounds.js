@@ -3,7 +3,9 @@ import {
   setTeam1Name,
   setTeam2Name,
   setTeam3Name,
-  setTeamScore,
+  setTeam1Score,
+  setTeam2Score,
+  setTeam3Score,
   transientGameState,
 } from "./currentGame.js";
 import {
@@ -12,7 +14,7 @@ import {
   team2Dropdown,
   team3Dropdown,
 } from "./Teams.js";
-import { roundRender1, roundScore, startGame } from "./Buttons.js";
+import { roundRender1, round1ScoreButton, startGame } from "./Buttons.js";
 
 export const initial = () => {
   const startGameButton = startGame();
@@ -28,7 +30,7 @@ export const teamSelect = async () => {
   document.addEventListener("change", handleTeam2Selection);
   document.addEventListener("change", handleTeam3Selection);
   return `<h2>Select Your Teams</h2>
-    <div class="round1__state">
+    <div class="teamSelect__state">
       <h2>Team 1${team1DropDownHTML}</h2>
         <img class="vsImage" src="../assets/vs.png" />
       <h2>Team 2${team2DropDownHTML}</h2>
@@ -39,16 +41,47 @@ export const teamSelect = async () => {
     `;
 };
 
+const handleTeam1Selection = (changeEvent) => {
+  if (changeEvent.target.id === "team1_choice") {
+    setTeam1Name(changeEvent.target, transientGameState.teams.team1);
+  }
+};
+
+const handleTeam2Selection = (changeEvent) => {
+  if (changeEvent.target.id === "team2_choice") {
+    setTeam2Name(changeEvent.target, transientGameState.teams.team2);
+  }
+};
+
+const handleTeam3Selection = (changeEvent) => {
+  if (changeEvent.target.id === "team3_choice") {
+    setTeam3Name(changeEvent.target, transientGameState.teams.team3);
+  }
+};
+
 export const round1 = async () => {
   const games = await transientGameState;
-  const round1Button = roundScore()
-  let round1 = `<section>
-        <h2 id="${games.teams.team1.teamId}">${games.teams.team1.name}</h2>
-        <input type="text" placeholder="R1 Score" name="score1">
-        <h2 id="${games.teams.team2.teamId}">${games.teams.team2.name}</h2>
-        <input type="text" placeholder="R2 Score" name="score2">
-        <h2 id="${games.teams.team3.teamId}">${games.teams.team3.name}</h2>
-        <input type="text" placeholder="R3 Score" name="score3"><br>
+  const round1Button = round1ScoreButton();
+  let round1 = `
+        <section class="round1__state">
+          <div class="team__rounds">
+            <h2>${games.teams.team1.name}</h2>
+            <h3>${games.teams.team1.score}</h3>
+            <input type="text" placeholder="Input Score..." name="score1">
+          </div>
+          <img class="vsImage" src="../assets/vs.png" />
+          <div class="team__rounds">
+            <h2>${games.teams.team2.name}</h2>
+            <h3>${games.teams.team2.score}</h3>
+            <input type="text" placeholder="Input Score..." name="score2">
+          </div>
+          <img class="vsImage" src="../assets/vs.png" />
+          <div class="team__rounds">
+            <h2>${games.teams.team3.name}</h2>
+            <h3>${games.teams.team3.score}</h3>
+            <input type="text" placeholder="Input Score..." name="score3"><br>
+          </div>
+        </section>
         ${round1Button}
         `;
 

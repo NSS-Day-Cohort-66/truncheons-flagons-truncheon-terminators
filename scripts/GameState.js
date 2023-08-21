@@ -1,6 +1,4 @@
 import {
-  setTeam1Name,
-  setTeamScore,
   transientGameState,
   resetTransientGameState,
   generateScoreCard,

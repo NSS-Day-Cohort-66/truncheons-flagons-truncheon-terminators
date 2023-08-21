@@ -26,7 +26,7 @@ export const round1 = async () => {
         ${game.teams.team1.score}
         `
     })
-
+return gameArr
 
 
 }

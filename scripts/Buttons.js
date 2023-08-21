@@ -91,5 +91,5 @@ const handleRound1Score = (clickEvent) => {
 }
 export const roundScore = () => {
     document.addEventListener("click", handleRound1Score )
-    return `<button class="round1Score" id="round1Score">Round 1 Scores!!</button>`
+    return `<button class="round1Score" id="round1Score">Round 2</button>`
 }

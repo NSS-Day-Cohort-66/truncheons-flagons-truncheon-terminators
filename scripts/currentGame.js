@@ -71,6 +71,24 @@ export const setTeam3Name = async (chosenTeam) => {
 };
 
 
+export const handleTeam1Selection = (changeEvent) => {
+  if (changeEvent.target.id === "team1_choice") {
+   setTeam1Name(changeEvent.target, transientGameState.teams.team1);
+ }
+};
+
+export const handleTeam2Selection = (changeEvent) => {
+ if (changeEvent.target.id === "team2_choice") {
+   setTeam2Name(changeEvent.target, transientGameState.teams.team2);
+ }
+};
+
+export const handleTeam3Selection = (changeEvent) => {
+ if (changeEvent.target.id === "team3_choice") {
+   setTeam3Name(changeEvent.target, transientGameState.teams.team3);
+ }
+};
+
 export const setTeamScore = (scoreThisRound, team) => {
   transientGameState.teams[team].score += scoreThisRound;
 };

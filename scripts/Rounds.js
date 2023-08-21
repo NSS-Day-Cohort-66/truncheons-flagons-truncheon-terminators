@@ -28,11 +28,13 @@ export const teamSelect = async () => {
   document.addEventListener("change", handleTeam2Selection);
   document.addEventListener("change", handleTeam3Selection);
   return `<h2>Select Your Teams</h2>
-    <div>Team 1${team1DropDownHTML}</div>
-    <img src="../assets/vs.png" />
-    <div>Team 2${team2DropDownHTML}</div>
-    <img src="../assets/vs.png" />
-    <div>Team 3${team3DropDownHTML}</div>
+    <div class="round1__state">
+      <h2>Team 1${team1DropDownHTML}</h2>
+        <img class="vsImage" src="../assets/vs.png" />
+      <h2>Team 2${team2DropDownHTML}</h2>
+        <img class="vsImage" src="../assets/vs.png" />
+      <h2>Team 3${team3DropDownHTML}</h2>
+    </div>
     ${handleRound1}
     `;
 };

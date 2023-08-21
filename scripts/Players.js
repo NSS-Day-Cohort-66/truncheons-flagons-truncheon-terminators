@@ -61,7 +61,9 @@ export const playerInput = async () => {
   document.addEventListener("change", handleCountry);
   document.addEventListener("change", handleTeamSelect);
 
-  let playerName = `<form class="creation--player">
+  let playerName = `
+  <h3> Create a New Player </h3>
+  <form class="creation--player">
   <label for="fname">First Name</label><br>
   <input type="text" placeholder="First Name Input" id="fname" name="fname"><br>
   <label for="lname">Last Name</label><br>
@@ -83,8 +85,7 @@ export const addPlayer = async () => {
   };
   const response = await fetch("http://localhost:8088/players", postOptions);
 
-  const customEvent = new CustomEvent("SavePlayer")
+  const customEvent = new CustomEvent("SavePlayer");
 
-  document.dispatchEvent(customEvent)
-
-}
+  document.dispatchEvent(customEvent);
+};

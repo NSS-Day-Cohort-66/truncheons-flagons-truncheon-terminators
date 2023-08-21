@@ -73,7 +73,9 @@ const handleTeam = (event) => {
 export const teamInput = () => {
   document.addEventListener("change", handleTeam);
 
-  let teamName = `<form class="creation--team">
+  let teamName = `
+  <h3> Create a New Team </h3>
+  <form class="creation--team">
   <label for="team">New Team Name</label><br>
   <input type="text" placeholder="Input Name Here" id="team" name="team"><br>
 

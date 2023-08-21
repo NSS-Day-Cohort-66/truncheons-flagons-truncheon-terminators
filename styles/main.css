@@ -9,12 +9,14 @@ body {
   background-repeat: repeat-y;
 }
 
+/* Primary Container */
 #main__contents {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
 }
 
+/* Secondary Containers */
 .metal__back {
   border-image-slice: 15 15 15 15;
   border-image-width: 16px 16px 16px 16px;
@@ -27,10 +29,21 @@ body {
   padding: 1em;
   margin: 1em;
   filter: drop-shadow(6px 10px 2px rgb(9, 9, 9));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+.metal__back:nth-child(2) {
+  flex-grow: 1;
+}
+
+.metal__back:nth-child(odd) {
+  flex: 0 0 20%;
+}
+/* Tertiary Containers */
 .container__creation,
-.container__game,
 .container__leaderboard {
   border-image-slice: 36 36 36 36;
   border-image-width: 36px 36px 36px 36px;
@@ -43,10 +56,10 @@ body {
   background-clip: content-box;
   padding: 1em;
   filter: drop-shadow(6px 10px 2px rgb(37, 37, 37));
-}
-
-.container__creation {
-  flex: 0 0 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .createPlayerForm {
@@ -55,11 +68,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 4em;
-}
-
-.creation--player {
-  flex: 0 0 50%;
+  padding: 1em;
+  text-align: center;
 }
 
 .createTeamForm {
@@ -72,11 +82,39 @@ body {
 }
 
 .container__game {
-  flex: 0 0 55%;
+  border-image-slice: 36 36 36 36;
+  border-image-width: 36px 36px 36px 36px;
+  border-image-outset: 12px 12px 12px 12px;
+  border-image-repeat: round round;
+  border-image-source: url("../assets/scrollBorder.png");
+  border-style: solid;
+  background-color: #bbaf7e;
+  background-size: cover;
+  background-clip: content-box;
+  padding: 1em;
+  filter: drop-shadow(6px 10px 2px rgb(37, 37, 37));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 20%;
+}
+
+.round1__state {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.vsImage {
+  width: 90px;
+  height: auto;
+  margin: 1em;
 }
 
 .container__leaderboard {
-  flex: 0 0 15%;
+  flex: 0 0 40%;
 }
 
 .aside__header {
@@ -86,4 +124,8 @@ body {
 
 .player__button {
   padding: 2em;
+}
+
+button {
+  margin: 0.75em;
 }

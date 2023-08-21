@@ -27,31 +27,36 @@ export const teamSelect = async () => {
   const team3DropDownHTML = await team3Dropdown();
   const handleRound1 = await roundRender1();
   return `<h2>Select Your Teams</h2>
-    <div>Team 1${team1DropDownHTML}</div>
-    <img src="../assets/vs.png" />
-    <div>Team 2${team2DropDownHTML}</div>
-    <img src="../assets/vs.png" />
-    <div>Team 3${team3DropDownHTML}</div>
+    <div class="round1__state">
+      <h2>Team 1${team1DropDownHTML}</h2>
+        <img class="vsImage" src="../assets/vs.png" />
+      <h2>Team 2${team2DropDownHTML}</h2>
+        <img class="vsImage" src="../assets/vs.png" />
+      <h2>Team 3${team3DropDownHTML}</h2>
+    </div>
     ${handleRound1}
     `;
 };
 
 const handleTeam1Selection = (changeEvent) => {
   if (changeEvent.target.id === "team1_choice") {
-    setTeamName(changeEvent.target.dataset.name, transientGameState.teams.team1);
-    console.log(transientGameState)
+    setTeamName(
+      changeEvent.target.dataset.name,
+      transientGameState.teams.team1
+    );
+    console.log(transientGameState);
   }
 };
 const handleTeam2Selection = (changeEvent) => {
   if (changeEvent.target.id === "team2_choice") {
     setTeamName(changeEvent.target.name, transientGameState.teams.team2);
-    console.log(transientGameState)
+    console.log(transientGameState);
   }
 };
 const handleTeam3Selection = (changeEvent) => {
   if (changeEvent.target.id === "team3_choice") {
     setTeamName(changeEvent.target.name, transientGameState.teams.team3);
-    console.log(transientGameState)
+    console.log(transientGameState);
   }
 };
 

@@ -1,6 +1,8 @@
 // Buttons for Dom
 
+import { renderGameHTML } from "./GameState.js"
 import { addPlayer } from "./Players.js"
+import { teamSelect } from "./Rounds.js"
 import { addTeam } from "./Teams.js"
 
 
@@ -16,7 +18,7 @@ export const createTeam = () => {
 
 
 
-const handleCreatePlayer = (clickEvent) => {
+export const handleCreatePlayer = (clickEvent) => {
     if (clickEvent.target.id === "create_player"){
         addPlayer()
     }
@@ -28,9 +30,10 @@ export const createPlayer = () => {
 
 
 
-const handleStartGame = (clickEvent) => {
+export const handleStartGame = (clickEvent) => {
     if (clickEvent.target.id === "start_game"){
-        // button event for function
+        const teamSelectHTML = teamSelect()
+        renderGameHTML(teamSelectHTML)
     }
 }
 export const startGame = () => {

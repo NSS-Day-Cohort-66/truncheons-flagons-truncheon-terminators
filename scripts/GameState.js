@@ -7,7 +7,7 @@ import {
   postTeamScoreCard,
 } from "./currentGame.js";
 import { playerInput } from "./Players.js";
-import { createPlayer, createTeam } from "./Buttons.js";
+import { createPlayer, createTeam, startGame, handleStartGame } from "./Buttons.js";
 import { teamInput } from "./Teams.js";
 import { leaderboardOutput } from "./Leaderboard.js";
 import { teamSelect, initial } from "./Rounds.js";

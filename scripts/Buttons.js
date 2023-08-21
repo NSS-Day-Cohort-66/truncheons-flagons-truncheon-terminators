@@ -1,8 +1,8 @@
 // Buttons for Dom
 
-import { renderGameHTML } from "./GameState.js"
+import { renderGameHTML, renderRound1 } from "./GameState.js"
 import { addPlayer } from "./Players.js"
-import { teamSelect } from "./Rounds.js"
+import { round1, teamSelect } from "./Rounds.js"
 import { addTeam } from "./Teams.js"
 
 
@@ -64,3 +64,15 @@ export const playAgain = () => {
     document.addEventListener("click", handlePlayAgain)
     return `<button class="play_button" id="play_again">PLAY AGAIN?</button>`
 }
+
+const handleRound1 = (clickEvent) => {
+    if( clickEvent.target.id === "round1"){
+        const roundOne = round1()
+        renderRound1(roundOne)
+    }
+}
+export const roundRender1 = () => {
+    document.addEventListener("click", handleRound1 )
+    return `<button class="round1" id="round1">Round 1!</button>`
+}
+

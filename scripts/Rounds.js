@@ -147,4 +147,6 @@ export const round3 = async () => {
   return round3;
 };
 
-const winnerScreen = "";
+export const winnerScreen = () => {
+  return `Winner Screen!`
+};

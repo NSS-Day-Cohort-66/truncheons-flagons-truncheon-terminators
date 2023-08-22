@@ -67,19 +67,16 @@ export const round1 = async () => {
         <section class="round1__state">
           <div class="team__rounds">
             <h2>${games.teams.team1.name}</h2>
-            <h3>${games.teams.team1.score}</h3>
             <input type="number" placeholder="Input Score..." name="score1" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
           </div>
           <img class="vsImage" src="../assets/vs.png" />
           <div class="team__rounds">
             <h2>${games.teams.team2.name}</h2>
-            <h3>${games.teams.team2.score}</h3>
             <input type="number" placeholder="Input Score..." name="score2" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
           </div>
           <img class="vsImage" src="../assets/vs.png" />
           <div class="team__rounds">
             <h2>${games.teams.team3.name}</h2>
-            <h3>${games.teams.team3.score}</h3>
             <input type="number" placeholder="Input Score..." name="score3" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
           </div>
         </section>
@@ -97,19 +94,19 @@ export const round2 = async () => {
         <section class="round1__state">
           <div class="team__rounds">
             <h2>${games.teams.team1.name}</h2>
-            <h3>${games.teams.team1.score}</h3>
+            <h2>${games.teams.team1.score}</h2>
             <input type="number" placeholder="Input Score..." name="score1" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
           </div>
           <img class="vsImage" src="../assets/vs.png" />
           <div class="team__rounds">
             <h2>${games.teams.team2.name}</h2>
-            <h3>${games.teams.team2.score}</h3>
+            <h2>${games.teams.team2.score}</h2>
             <input type="number" placeholder="Input Score..." name="score2" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
           </div>
           <img class="vsImage" src="../assets/vs.png" />
           <div class="team__rounds">
             <h2>${games.teams.team3.name}</h2>
-            <h3>${games.teams.team3.score}</h3>
+            <h2>${games.teams.team3.score}</h2>
             <input type="number" placeholder="Input Score..." name="score3" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
           </div>
         </section>

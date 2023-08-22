@@ -462,6 +462,42 @@
       "teamScore": 57,
       "gameDate": "2023-08-22",
       "id": 54
+    },
+    {
+      "teamId": 4,
+      "teamScore": 13,
+      "gameDate": "2023-08-22",
+      "id": 55
+    },
+    {
+      "teamId": 3,
+      "teamScore": 12,
+      "gameDate": "2023-08-22",
+      "id": 56
+    },
+    {
+      "teamId": 1,
+      "teamScore": 20,
+      "gameDate": "2023-08-22",
+      "id": 57
+    },
+    {
+      "teamId": 4,
+      "teamScore": 19,
+      "gameDate": "2023-08-22",
+      "id": 58
+    },
+    {
+      "teamId": 1,
+      "teamScore": 27,
+      "gameDate": "2023-08-22",
+      "id": 59
+    },
+    {
+      "teamId": 3,
+      "teamScore": 17,
+      "gameDate": "2023-08-22",
+      "id": 60
     }
   ]
 }

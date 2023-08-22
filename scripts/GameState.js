@@ -80,17 +80,28 @@ export const displayWinner = () => {
   const teams = transientGameState.teams;
   let winner = "";
   let winnerScore = 0;
+  let count = 0
+  let tiedString = ""
   for (const team of teams) {
     if (team.score > winnerScore) {
       winnerScore = team.score
       winner = team.name;
+      count = 0
+      tiedString = team.name
+    } else if (team.score = winnerScore && team.score > 0){
+      count++
+      tiedString += ` and ${team.name}`
     }
   }
   let winnerHTML = "";
-  if (winner > 0) {
-    winnerHTML = `Team ${winner} has won this time!`;
-  } else {
-    winnerHTML = `There was no winner`;
+  if (winnerScore > 0 && count == 0) {
+    winnerHTML = `Team ${winner} has won this time with ${winnerScore} points!`;
+  } else if (winnerScore = 0) {
+    winnerHTML = `There was no winner. You all tied for last with zero points :(`;
+  } else if (count == 1){
+    winnerHTML = `Tied between ${tied} with ${winnerScore} points!`
+  } else if (count == 2){
+    winnerHTML = `THREE WAY TIE! ${tiedString} all had ${winnerScore} points`
   }
   return winnerHTML;
 };

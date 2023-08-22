@@ -1,12 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+
+
+
 #header_graphic {
   display: flex;
   justify-content: center;
 }
 
+h2 {
+  size: 20em
+}
+
 body {
+  font-family: 'Old Standard TT', serif;
+  /* font-family: 'Sedgwick Ave Display', cursive; */
   background-color: bisque;
   background-image: url("../assets/woodBackground.png");
-  background-repeat: repeat-y;
+  background-size: 2600px 600px;
+  background-repeat: repeat;
 }
 
 /* Primary Container */
@@ -146,6 +158,29 @@ body {
 
 button {
   margin: 0.75em;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px black;
+  transition: transform 0.2s ease;
+}
+
+button:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+select {
+  padding: 8px;
+  margin: 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+input {
+  padding: 8px;
+  margin: 5px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
 }
 
 .round__title {

@@ -31,7 +31,7 @@ const leaderboardCompiler =  async() => {
 export const leaderboardOutput = async () => {
   let ranked = await leaderboardCompiler();
   const sorted = [...ranked].sort((a, b) => b[1].teamScore - a[1].teamScore);
-  let html = `<div class="aside__header"><h3> Leaderboard </h3></div>
+  let html = `<div class="aside__header"><h2> Leaderboard </h2></div>
               <ol class="leaderboard__board">`;
   let output = sorted.map((rank) => {
     return `<li class="board--team">${rank[1].teamName} - - ${rank[1].teamScore}</li>`;

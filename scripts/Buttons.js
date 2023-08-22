@@ -12,7 +12,7 @@ import {
   postTeamScoreCard3,
   resetTransientGameState,
 } from "./currentGame.js";
-import { renderGameHTML, renderRound1 } from "./GameState.js";
+import { renderGameHTML, renderLeaderboardHTML, renderRound1 } from "./GameState.js";
 import { addPlayer } from "./Players.js";
 import { round1, round2, round3, winnerScreen, teamSelect } from "./Rounds.js";
 import { addTeam } from "./Teams.js";
@@ -154,6 +154,7 @@ const handleSubmitScore = (clickEvent) => {
       postTeamScoreCard3(transientGameState.teams.team3);
       resetTransientGameState();
       renderGameHTML(winnerScreenHTML);
+      renderLeaderboardHTML();
     } else {
       window.alert("Add scores to each team even if zero points");
     }

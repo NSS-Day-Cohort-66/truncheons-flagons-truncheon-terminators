@@ -86,8 +86,8 @@ const renderRound = async () => {
 //   return finalScoresHTML;
 // };
 
-export const displayFinalScores = () => {
-  const teams = transientGameState.teams;
+export const displayFinalScores = async () => {
+  const teams = await transientGameState.teams;
   const finalScoreArray = [];
 
   for (const teamKey in teams) {
@@ -107,8 +107,8 @@ export const displayFinalScores = () => {
   return finalScoresHTML;
 };
 
-export const displayWinner = () => {
-  const teams = transientGameState.teams;
+export const displayWinner = async () => {
+  const teams = await transientGameState.teams;
   let winner = "";
   let winnerScore = 0;
   let count = 0;

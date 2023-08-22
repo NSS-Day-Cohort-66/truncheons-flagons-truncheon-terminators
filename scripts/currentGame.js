@@ -31,7 +31,7 @@ export let transientGameState = {
         teamScore: 0,
         gameDate: "",
       },
-    },
+    }
   }
 };
 

@@ -80,7 +80,7 @@ export const displayFinalScores = () => {
 };
 
 export const displayWinner = () => {
-  const teams = transientGameState.teams;
+  let teams = transientGameState.teams
   let winner = "";
   let winnerScore = 0;
   let count = 0

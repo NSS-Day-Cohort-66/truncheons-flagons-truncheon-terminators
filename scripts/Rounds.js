@@ -147,6 +147,20 @@ export const round3 = async () => {
   return round3;
 };
 
-export const winnerScreen = () => {
-  return `Winner Screen!`
-};
+export const winnerScreen = async() => {
+//   const games = await transientGameState
+//   const winner = await displayWinner()
+//   const score = await displayFinalScores()
+//   // button declaration here
+//   let finalScreen = `
+//   <img class="round__title" src="../assets/finalScore.png" />
+//   <section class="final_round">
+//   <div>
+//   <h2>RESULTS</h2>
+//   ${winner}
+//   ${score}
+//   </div>
+// </section>
+//   `
+  return finalScreen
+}

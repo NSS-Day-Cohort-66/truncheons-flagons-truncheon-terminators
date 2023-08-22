@@ -246,6 +246,222 @@
       "teamScore": 1009,
       "gameDate": "2023-08-22",
       "id": 18
+    },
+    {
+      "teamId": 1,
+      "teamScore": 29,
+      "gameDate": "2023-08-22",
+      "id": 19
+    },
+    {
+      "teamId": 3,
+      "teamScore": 11,
+      "gameDate": "2023-08-22",
+      "id": 20
+    },
+    {
+      "teamId": 6,
+      "teamScore": 11,
+      "gameDate": "2023-08-22",
+      "id": 21
+    },
+    {
+      "teamId": 1,
+      "teamScore": 225,
+      "gameDate": "2023-08-22",
+      "id": 22
+    },
+    {
+      "teamId": 3,
+      "teamScore": 5,
+      "gameDate": "2023-08-22",
+      "id": 23
+    },
+    {
+      "teamId": 6,
+      "teamScore": 3020,
+      "gameDate": "2023-08-22",
+      "id": 24
+    },
+    {
+      "teamId": 2,
+      "teamScore": 6,
+      "gameDate": "2023-08-22",
+      "id": 25
+    },
+    {
+      "teamId": 3,
+      "teamScore": 6,
+      "gameDate": "2023-08-22",
+      "id": 26
+    },
+    {
+      "teamId": 4,
+      "teamScore": 16,
+      "gameDate": "2023-08-22",
+      "id": 27
+    },
+    {
+      "teamId": 2,
+      "teamScore": 9,
+      "gameDate": "2023-08-22",
+      "id": 28
+    },
+    {
+      "teamId": 3,
+      "teamScore": 9,
+      "gameDate": "2023-08-22",
+      "id": 29
+    },
+    {
+      "teamId": 4,
+      "teamScore": 19,
+      "gameDate": "2023-08-22",
+      "id": 30
+    },
+    {
+      "teamId": 2,
+      "teamScore": 12,
+      "gameDate": "2023-08-22",
+      "id": 31
+    },
+    {
+      "teamId": 3,
+      "teamScore": 12,
+      "gameDate": "2023-08-22",
+      "id": 32
+    },
+    {
+      "teamId": 4,
+      "teamScore": 22,
+      "gameDate": "2023-08-22",
+      "id": 33
+    },
+    {
+      "teamId": 6,
+      "teamScore": 15,
+      "gameDate": "2023-08-22",
+      "id": 34
+    },
+    {
+      "teamId": 1,
+      "teamScore": 11,
+      "gameDate": "2023-08-22",
+      "id": 35
+    },
+    {
+      "teamId": 3,
+      "teamScore": 12,
+      "gameDate": "2023-08-22",
+      "id": 36
+    },
+    {
+      "teamId": 3,
+      "teamScore": 15,
+      "gameDate": "2023-08-22",
+      "id": 37
+    },
+    {
+      "teamId": 1,
+      "teamScore": 14,
+      "gameDate": "2023-08-22",
+      "id": 38
+    },
+    {
+      "teamId": 6,
+      "teamScore": 22,
+      "gameDate": "2023-08-22",
+      "id": 39
+    },
+    {
+      "teamId": 3,
+      "teamScore": 18,
+      "gameDate": "2023-08-22",
+      "id": 40
+    },
+    {
+      "teamId": 1,
+      "teamScore": 17,
+      "gameDate": "2023-08-22",
+      "id": 41
+    },
+    {
+      "teamId": 6,
+      "teamScore": 29,
+      "gameDate": "2023-08-22",
+      "id": 42
+    },
+    {
+      "teamId": 3,
+      "teamScore": 21,
+      "gameDate": "2023-08-22",
+      "id": 43
+    },
+    {
+      "teamId": 1,
+      "teamScore": 20,
+      "gameDate": "2023-08-22",
+      "id": 44
+    },
+    {
+      "teamId": 6,
+      "teamScore": 36,
+      "gameDate": "2023-08-22",
+      "id": 45
+    },
+    {
+      "teamId": 3,
+      "teamScore": 24,
+      "gameDate": "2023-08-22",
+      "id": 46
+    },
+    {
+      "teamId": 1,
+      "teamScore": 23,
+      "gameDate": "2023-08-22",
+      "id": 47
+    },
+    {
+      "teamId": 6,
+      "teamScore": 43,
+      "gameDate": "2023-08-22",
+      "id": 48
+    },
+    {
+      "teamId": 3,
+      "teamScore": 27,
+      "gameDate": "2023-08-22",
+      "id": 49
+    },
+    {
+      "teamId": 1,
+      "teamScore": 26,
+      "gameDate": "2023-08-22",
+      "id": 50
+    },
+    {
+      "teamId": 6,
+      "teamScore": 50,
+      "gameDate": "2023-08-22",
+      "id": 51
+    },
+    {
+      "teamId": 3,
+      "teamScore": 30,
+      "gameDate": "2023-08-22",
+      "id": 52
+    },
+    {
+      "teamId": 1,
+      "teamScore": 29,
+      "gameDate": "2023-08-22",
+      "id": 53
+    },
+    {
+      "teamId": 6,
+      "teamScore": 57,
+      "gameDate": "2023-08-22",
+      "id": 54
     }
   ]
 }

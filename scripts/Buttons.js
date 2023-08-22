@@ -7,7 +7,7 @@ import {
 } from "./currentGame.js";
 import { renderGameHTML, renderRound1 } from "./GameState.js";
 import { addPlayer } from "./Players.js";
-import { round1, teamSelect } from "./Rounds.js";
+import { round1, teamSelect, round2 } from "./Rounds.js";
 import { addTeam } from "./Teams.js";
 
 const handleCreateTeam = (clickEvent) => {
@@ -70,8 +70,8 @@ const handleRound1 = (clickEvent) => {
         tGS.team1.teamId !== tGS.team3.teamId &&
         tGS.team2.teamId !== tGS.team3.teamId
       ) {
-        const roundOne = round1();
-        renderRound1(roundOne);
+        const round1HTML = round1();
+        renderGameHTML(round1HTML);
       } else {
         window.alert(`Must chose three teams, and all must be different`);
       }
@@ -90,6 +90,7 @@ export const round1ScoreButton = () => {
 };
 
 const handleRound1Score = (clickEvent) => {
+  const round2HTML = round2()
   const inputElement1 = document.querySelector('input[name="score1"]');
   const userInput1 = inputElement1.value;
   const inputElement2 = document.querySelector('input[name="score2"]');
@@ -97,9 +98,14 @@ const handleRound1Score = (clickEvent) => {
   const inputElement3 = document.querySelector('input[name="score3"]');
   const userInput3 = inputElement3.value;
   if (clickEvent.target.id === "round1Score") {
+    if (userInput1 && userInput2 && userInput3){
     transientGameState.teams.team1.score += parseInt(userInput1);
     transientGameState.teams.team2.score += parseInt(userInput2);
     transientGameState.teams.team3.score += parseInt(userInput3);
-  }
+    renderGameHTML(round2HTML)
+    } else {
+    window.alert("Add scores to each team even if zero points")
+    }
   console.log(transientGameState);
-};
+  }
+}

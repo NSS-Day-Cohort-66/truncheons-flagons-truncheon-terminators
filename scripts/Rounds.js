@@ -89,7 +89,9 @@ export const round1 = async () => {
   return round1;
 };
 
-const round2 = "";
+export const round2 = () => {
+  return `round 2!`
+};
 
 const finalRound = "";
 

@@ -62,7 +62,7 @@ export const playerInput = async () => {
   document.addEventListener("change", handleTeamSelect);
 
   let playerName = `
-  <h3> Create a New Player </h3>
+  <h2> Create a New Player </h2>
   <form class="creation--player">
   <label for="fname">First Name</label><br>
   <input type="text" placeholder="First Name Input" id="fname" name="fname"><br>

@@ -7,7 +7,7 @@ import {
 } from "./currentGame.js";
 import { renderGameHTML, renderRound1 } from "./GameState.js";
 import { addPlayer } from "./Players.js";
-import { round1, teamSelect, round2 } from "./Rounds.js";
+import { round1, round2, teamSelect } from "./Rounds.js";
 import { addTeam } from "./Teams.js";
 
 const handleCreateTeam = (clickEvent) => {
@@ -109,3 +109,13 @@ const handleRound1Score = (clickEvent) => {
     console.log(transientGameState);
   }
 };
+
+const handleRound2 = (clickEvent) => {
+  if (clickEvent.target.id === "round2Score") {
+  }
+}
+
+export const round2ScoreButton = () => {
+  document.addEventListener("click", handleRound2)
+  return `<button class="round2Score" id="round2Score">Round 3!</button>`
+}

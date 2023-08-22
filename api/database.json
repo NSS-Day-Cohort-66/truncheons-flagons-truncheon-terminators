@@ -179,24 +179,6 @@
       "teamId": 3,
       "teamScore": 1,
       "gameDate": "2023-08-17"
-    },
-    {
-      "teamId": 6,
-      "teamScore": 335,
-      "gameDate": "2023-08-22",
-      "id": 7
-    },
-    {
-      "teamId": 3,
-      "teamScore": 6,
-      "gameDate": "2023-08-22",
-      "id": 8
-    },
-    {
-      "teamId": 1,
-      "teamScore": 8,
-      "gameDate": "2023-08-22",
-      "id": 9
     }
   ]
 }

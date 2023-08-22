@@ -7,7 +7,7 @@ import {
 } from "./currentGame.js";
 import { renderGameHTML, renderRound1 } from "./GameState.js";
 import { addPlayer } from "./Players.js";
-import { round1, round2, teamSelect } from "./Rounds.js";
+import { round1, round2, round3, teamSelect } from "./Rounds.js";
 import { addTeam } from "./Teams.js";
 
 const handleCreateTeam = (clickEvent) => {
@@ -92,11 +92,11 @@ export const round1ScoreButton = () => {
 const handleRound1Score = (clickEvent) => {
   const round2HTML = round2();
   if (clickEvent.target.id === "round1Score") {
-    const inputElement1 = document.querySelector('input[name="score1"]');
+    const inputElement1 = document.querySelector('input[name="score1_round1"]');
     const userInput1 = inputElement1.value;
-    const inputElement2 = document.querySelector('input[name="score2"]');
+    const inputElement2 = document.querySelector('input[name="score2_round1"]');
     const userInput2 = inputElement2.value;
-    const inputElement3 = document.querySelector('input[name="score3"]');
+    const inputElement3 = document.querySelector('input[name="score3_round1"]');
     const userInput3 = inputElement3.value;
     if (userInput1 && userInput2 && userInput3) {
       transientGameState.teams.team1.score += parseInt(userInput1);
@@ -111,7 +111,23 @@ const handleRound1Score = (clickEvent) => {
 };
 
 const handleRound2 = (clickEvent) => {
+  const round3HTML = round3();
   if (clickEvent.target.id === "round2Score") {
+    const inputElement1 = document.querySelector('input[name="score1_round2"]');
+    const userInput1 = inputElement1.value;
+    const inputElement2 = document.querySelector('input[name="score2_round2"]');
+    const userInput2 = inputElement2.value;
+    const inputElement3 = document.querySelector('input[name="score3_round2"]');
+    const userInput3 = inputElement3.value;
+    if (userInput1 && userInput2 && userInput3) {
+      transientGameState.teams.team1.score += parseInt(userInput1);
+      transientGameState.teams.team2.score += parseInt(userInput2);
+      transientGameState.teams.team3.score += parseInt(userInput3);
+      renderGameHTML(round3HTML);
+    } else {
+      window.alert("Add scores to each team even if zero points");
+    }
+    console.log(transientGameState);
   }
 }
 

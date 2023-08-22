@@ -12,7 +12,13 @@ import {
   postTeamScoreCard3,
   resetTransientGameState,
 } from "./currentGame.js";
-import { renderGameHTML, renderLeaderboardHTML, renderRound1 } from "./GameState.js";
+import {
+  renderGameHTML,
+  renderInitialHTML,
+  renderLeaderboardHTML,
+  renderPlayAgain,
+  renderRound1,
+} from "./GameState.js";
 import { addPlayer } from "./Players.js";
 import { round1, round2, round3, winnerScreen, teamSelect } from "./Rounds.js";
 import { addTeam } from "./Teams.js";
@@ -50,7 +56,8 @@ export const startGame = () => {
 
 const handlePlayAgain = (clickEvent) => {
   if (clickEvent.target.id === "play_again") {
-    //button event for function
+    resetTransientGameState();
+    renderPlayAgain();
   }
 };
 export const playAgain = () => {

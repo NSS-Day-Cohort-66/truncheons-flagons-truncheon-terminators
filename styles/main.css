@@ -53,6 +53,10 @@ input {
   justify-content: center;
 }
 
+li:nth-child(odd) {
+  background-color: #c6ba8a;
+}
+
 /* Primary Container */
 #main__contents {
   display: flex;
@@ -180,17 +184,10 @@ input {
 .container__leaderboard {
   flex: 0 0 90%;
   display: flex;
-  align-items: flex-start;
   flex-direction: column;
   justify-content: flex-start;
-  text-align: center;
   margin-left: 8px;
   margin-right: 8px;
-}
-
-.container__leaderboard:nth-child(1) {
-  align-self: center;
-  justify-content: center;
 }
 
 .leaderboard__board {

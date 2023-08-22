@@ -82,6 +82,7 @@ export const displayWinner = () => {
   let winnerScore = 0;
   for (const team of teams) {
     if (team.score > winnerScore) {
+      winnerScore = team.score
       winner = team.name;
     }
   }

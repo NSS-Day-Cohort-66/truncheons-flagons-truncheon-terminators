@@ -4,10 +4,17 @@ import {
   setTeam1Score,
   setTeam2Score,
   setTeam3Score,
+  generateScoreCard1,
+  generateScoreCard2,
+  generateScoreCard3,
+  postTeamScoreCard1,
+  postTeamScoreCard2,
+  postTeamScoreCard3,
+  resetTransientGameState,
 } from "./currentGame.js";
-import { renderGameHTML, renderRound1 } from "./GameState.js";
+import { renderGameHTML, renderLeaderboardHTML, renderRound1 } from "./GameState.js";
 import { addPlayer } from "./Players.js";
-import { round1, round2, round3, teamSelect } from "./Rounds.js";
+import { round1, round2, round3, winnerScreen, teamSelect } from "./Rounds.js";
 import { addTeam } from "./Teams.js";
 
 const handleCreateTeam = (clickEvent) => {
@@ -39,16 +46,6 @@ export const handleStartGame = (clickEvent) => {
 export const startGame = () => {
   document.addEventListener("click", handleStartGame);
   return `<button class="start_button" id="start_game">START GAME</button>`;
-};
-
-const handleSubmitScore = (clickEvent) => {
-  if (clickEvent.target.id === "save_score") {
-    // button event for function
-  }
-};
-export const submitScore = () => {
-  document.addEventListener("click", handleSubmitScore);
-  return `<button class="submit_button" id="save_score">SUBMIT SCORE!</button>`;
 };
 
 const handlePlayAgain = (clickEvent) => {
@@ -129,9 +126,43 @@ const handleRound2 = (clickEvent) => {
     }
     console.log(transientGameState);
   }
-}
+};
 
 export const round2ScoreButton = () => {
-  document.addEventListener("click", handleRound2)
-  return `<button class="round2Score" id="round2Score">Round 3!</button>`
-}
+  document.addEventListener("click", handleRound2);
+  return `<button class="round2Score" id="round2Score">Round 3!</button>`;
+};
+
+const handleSubmitScore = (clickEvent) => {
+  const winnerScreenHTML = winnerScreen();
+  if (clickEvent.target.id === "save_score") {
+    const inputElement1 = document.querySelector('input[name="score1_round3"]');
+    const userInput1 = inputElement1.value;
+    const inputElement2 = document.querySelector('input[name="score2_round3"]');
+    const userInput2 = inputElement2.value;
+    const inputElement3 = document.querySelector('input[name="score3_round3"]');
+    const userInput3 = inputElement3.value;
+    if (userInput1 && userInput2 && userInput3) {
+      transientGameState.teams.team1.score += parseInt(userInput1);
+      transientGameState.teams.team2.score += parseInt(userInput2);
+      transientGameState.teams.team3.score += parseInt(userInput3);
+      generateScoreCard1(transientGameState.teams.team1);
+      generateScoreCard2(transientGameState.teams.team2);
+      generateScoreCard3(transientGameState.teams.team3);
+      postTeamScoreCard1(transientGameState.teams.team1);
+      postTeamScoreCard2(transientGameState.teams.team2);
+      postTeamScoreCard3(transientGameState.teams.team3);
+      resetTransientGameState();
+      renderGameHTML(winnerScreenHTML);
+      renderLeaderboardHTML();
+    } else {
+      window.alert("Add scores to each team even if zero points");
+    }
+    console.log(transientGameState);
+  }
+};
+
+export const submitScore = () => {
+  document.addEventListener("click", handleSubmitScore);
+  return `<button class="submit_button" id="save_score">SUBMIT SCORE!</button>`;
+};

@@ -1,8 +1,6 @@
 import {
   transientGameState,
   resetTransientGameState,
-  generateScoreCard,
-  postTeamScoreCard,
 } from "./currentGame.js";
 import { playerInput } from "./Players.js";
 import { createPlayer, createTeam, startGame, handleStartGame } from "./Buttons.js";

@@ -41,6 +41,11 @@ export const renderRound1 = async (round1) => {
   gameContainer.innerHTML = roundOutput
 }
 
+export const renderRound2 = async (round2) => {
+  const roundOutput = await round2
+  gameContainer.innerHTML = roundOutput
+}
+
 export const renderLeaderboardHTML = async () => {
   const leaderboardHTML = await leaderboardOutput();
   const outputHTML = `

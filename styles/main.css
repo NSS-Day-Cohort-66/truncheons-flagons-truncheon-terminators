@@ -1,24 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap");
 
+/* Global Scope */
 
-
-#header_graphic {
-  display: flex;
-  justify-content: center;
+ol {
+  padding-inline-start: 18px;
+  font-size: 10pt;
 }
 
 h2 {
-  size: 20em
+  size: 20em;
 }
 
 body {
-  font-family: 'Old Standard TT', serif;
+  font-family: "Old Standard TT", serif;
   /* font-family: 'Sedgwick Ave Display', cursive; */
   background-color: bisque;
   background-image: url("../assets/woodBackground.png");
   background-size: 2600px 600px;
   background-repeat: repeat;
+}
+
+button {
+  margin: 0.75em;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px black;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+select {
+  padding: 8px;
+  margin: 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+input {
+  padding: 8px;
+  margin: 5px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+#header_graphic {
+  display: flex;
+  justify-content: center;
 }
 
 /* Primary Container */
@@ -144,43 +176,22 @@ body {
 }
 
 .container__leaderboard {
-  flex: 0 0 40%;
+  flex: 0 0 90%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
 }
 
 .aside__header {
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 .player__button {
   padding: 2em;
-}
-
-button {
-  margin: 0.75em;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 1px 1px 2px black;
-  transition: transform 0.2s ease;
-}
-
-button:hover{
-  transform: scale(1.1);
-  cursor: pointer;
-}
-
-select {
-  padding: 8px;
-  margin: 15px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-}
-
-input {
-  padding: 8px;
-  margin: 5px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
 }
 
 .round__title {

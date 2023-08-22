@@ -145,6 +145,8 @@ input {
   flex: 0 0 20%;
 }
 
+/* Elements */
+
 .teamSelect__state {
   display: flex;
   justify-content: space-around;
@@ -182,6 +184,13 @@ input {
   flex-direction: column;
   justify-content: flex-start;
   text-align: center;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.leaderboard__board {
+  flex: 1 0 90%;
+  margin: 0px 16px 0px 16px;
 }
 
 .aside__header {

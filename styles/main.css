@@ -188,6 +188,11 @@ input {
   margin-right: 8px;
 }
 
+.container__leaderboard:nth-child(1) {
+  align-self: center;
+  justify-content: center;
+}
+
 .leaderboard__board {
   flex: 1 0 90%;
   margin: 0px 16px 0px 16px;

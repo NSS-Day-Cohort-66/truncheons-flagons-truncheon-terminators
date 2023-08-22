@@ -147,9 +147,9 @@ export const round3 = async () => {
   return round3;
 };
 
-export const winnerScreen = () => {
-  const winner = displayWinner()
-  const score = displayFinalScores()
+export const winnerScreen = async () => {
+  const winner = await displayWinner()
+  const score = await displayFinalScores()
   const playAgainButton = playAgain();
   // button declaration here
   let finalScreen = `

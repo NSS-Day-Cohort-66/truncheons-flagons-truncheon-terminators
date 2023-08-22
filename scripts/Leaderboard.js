@@ -5,9 +5,8 @@ const fetchScores = async () => {
   return scores;
 };
 
-const leaderboard = await fetchScores();
-
-const leaderboardCompiler =  async() => {
+const leaderboardCompiler = async () => {
+  const leaderboard = await fetchScores();
   // ? Sets a new map to hold the compiled data of score totals, iterates through the leaderboard to set scores
   const compiled = new Map();
   leaderboard.forEach((game) => {

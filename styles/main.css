@@ -5,7 +5,7 @@
 
 ol {
   padding-inline-start: 18px;
-  font-size: 10pt;
+  font-size: 8pt;
 }
 
 h2 {
@@ -55,6 +55,14 @@ input {
 
 li:nth-child(odd) {
   background-color: #c6ba8a;
+}
+
+li:nth-child(-n + 3) {
+  font-size: 1.1em;
+}
+
+li:nth-child(1) {
+  font-weight: bold;
 }
 
 /* Primary Container */

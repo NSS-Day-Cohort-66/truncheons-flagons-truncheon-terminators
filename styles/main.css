@@ -216,3 +216,15 @@ li:nth-child(1) {
 .round__title {
   margin: 1em;
 }
+
+.final_round {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.winner_text {
+  margin: 0px 16px 0px 16px;
+}

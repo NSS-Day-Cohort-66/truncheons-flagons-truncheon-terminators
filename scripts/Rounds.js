@@ -14,7 +14,14 @@ import {
   team2Dropdown,
   team3Dropdown,
 } from "./Teams.js";
-import { roundRender1, round1ScoreButton, round2ScoreButton, startGame, submitScore, playAgain } from "./Buttons.js";
+import {
+  roundRender1,
+  round1ScoreButton,
+  round2ScoreButton,
+  startGame,
+  submitScore,
+  playAgain,
+} from "./Buttons.js";
 
 export const initial = () => {
   const startGameButton = startGame();
@@ -88,7 +95,7 @@ export const round1 = async () => {
 
 export const round2 = async () => {
   const games = await transientGameState;
-   const round2Button = round2ScoreButton(); 
+  const round2Button = round2ScoreButton();
   let round2 = `
       <img class="round__title" src="../assets/round2.png" />
         <section class="round1__state">
@@ -116,10 +123,9 @@ export const round2 = async () => {
   return round2;
 };
 
-
 export const round3 = async () => {
   const games = await transientGameState;
-   const finalButton = submitScore(); 
+  const finalButton = submitScore();
   let round3 = `
       <img class="round__title" src="../assets/round3.png" />
         <section class="round1__state">
@@ -148,20 +154,21 @@ export const round3 = async () => {
 };
 
 export const winnerScreen = async () => {
-  const winner = await displayWinner()
-  const score = await displayFinalScores()
+  const winner = await displayWinner();
+  const score = await displayFinalScores();
   const playAgainButton = playAgain();
   // button declaration here
   let finalScreen = `
   <img class="round__title" src="../assets/finalScore.png" />
   <section class="final_round">
-  <div>
-  <h2>RESULTS</h2>
-  ${winner}
+  <div class="winner">
+    <h2 class="winner_text">${winner}</h2>
+  </div>
+  <div class="scores">
   ${score}
   </div>
   <div>${playAgainButton}</div>
 </section>
-  `
-  return finalScreen
-}
+  `;
+  return finalScreen;
+};

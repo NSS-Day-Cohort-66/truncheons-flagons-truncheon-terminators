@@ -14,7 +14,7 @@ import {
   team2Dropdown,
   team3Dropdown,
 } from "./Teams.js";
-import { roundRender1, round1ScoreButton, round2ScoreButton, startGame, submitScore } from "./Buttons.js";
+import { roundRender1, round1ScoreButton, round2ScoreButton, startGame, submitScore, playAgain } from "./Buttons.js";
 
 export const initial = () => {
   const startGameButton = startGame();
@@ -147,6 +147,21 @@ export const round3 = async () => {
   return round3;
 };
 
-export const winnerScreen = () => {
-  return `Winner Screen!`
-};
+export const winnerScreen = async () => {
+  const winner = await displayWinner()
+  const score = await displayFinalScores()
+  const playAgainButton = playAgain();
+  // button declaration here
+  let finalScreen = `
+  <img class="round__title" src="../assets/finalScore.png" />
+  <section class="final_round">
+  <div>
+  <h2>RESULTS</h2>
+  ${winner}
+  ${score}
+  </div>
+  <div>${playAgainButton}</div>
+</section>
+  `
+  return finalScreen
+}

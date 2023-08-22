@@ -14,7 +14,9 @@ import {
 } from "./currentGame.js";
 import {
   renderGameHTML,
+  renderInitialHTML,
   renderLeaderboardHTML,
+  renderPlayAgain,
   renderRound1,
 } from "./GameState.js";
 import { addPlayer } from "./Players.js";
@@ -54,7 +56,8 @@ export const startGame = () => {
 
 const handlePlayAgain = (clickEvent) => {
   if (clickEvent.target.id === "play_again") {
-    //button event for function
+    resetTransientGameState();
+    renderPlayAgain();
   }
 };
 export const playAgain = () => {

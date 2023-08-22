@@ -14,7 +14,7 @@ import {
   team2Dropdown,
   team3Dropdown,
 } from "./Teams.js";
-import { roundRender1, round1ScoreButton, round2ScoreButton, startGame } from "./Buttons.js";
+import { roundRender1, round1ScoreButton, round2ScoreButton, startGame, submitScore } from "./Buttons.js";
 
 export const initial = () => {
   const startGameButton = startGame();
@@ -117,8 +117,34 @@ export const round2 = async () => {
 };
 
 
-export const round3 = () => {
-  return `Round 3!`
+export const round3 = async () => {
+  const games = await transientGameState;
+   const finalButton = submitScore(); 
+  let round3 = `
+      <img class="round__title" src="../assets/round3.png" />
+        <section class="round1__state">
+          <div class="team__rounds">
+            <h2>${games.teams.team1.name}</h2>
+            <h2>${games.teams.team1.score}</h2>
+            <input type="number" placeholder="Input Score..." name="score1_round3" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+          </div>
+          <img class="vsImage" src="../assets/vs.png" />
+          <div class="team__rounds">
+            <h2>${games.teams.team2.name}</h2>
+            <h2>${games.teams.team2.score}</h2>
+            <input type="number" placeholder="Input Score..." name="score2_round3" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+          </div>
+          <img class="vsImage" src="../assets/vs.png" />
+          <div class="team__rounds">
+            <h2>${games.teams.team3.name}</h2>
+            <h2>${games.teams.team3.score}</h2>
+            <input type="number" placeholder="Input Score..." name="score3_round3" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+          </div>
+        </section>
+        ${finalButton} 
+        `;
+
+  return round3;
 };
 
 const winnerScreen = "";

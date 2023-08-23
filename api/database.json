@@ -104,6 +104,13 @@
       "lastName": "Andersson",
       "countryOfOrigin": "Sweden",
       "teamId": 5
+    },
+    {
+      "firstName": "Bob",
+      "lastName": "Bobberson",
+      "countryOfOrigin": "Bobtonland",
+      "teamId": 6,
+      "id": 16
     }
   ],
   "teams": [
@@ -136,6 +143,11 @@
       "name": "Voldemort",
       "createdDate": "2023-08-21",
       "id": 6
+    },
+    {
+      "name": "The Bobs",
+      "createdDate": "2023-08-22",
+      "id": 7
     }
   ],
   "scores": [
@@ -192,6 +204,123 @@
       "teamScore": 3,
       "gameDate": "2023-08-22",
       "id": 9
+<<<<<<< HEAD
+=======
+    },
+    {
+      "teamId": 1,
+      "teamScore": 9,
+      "gameDate": "2023-08-22",
+      "id": 10
+    },
+    {
+      "teamId": 1,
+      "teamScore": 3,
+      "gameDate": "2023-08-22",
+      "id": 11
+    },
+    {
+      "teamId": 3,
+      "teamScore": 6,
+      "gameDate": "2023-08-22",
+      "id": 12
+    },
+    {
+      "teamId": 2,
+      "teamScore": 9,
+      "gameDate": "2023-08-22",
+      "id": 13
+    },
+    {
+      "teamId": 1,
+      "teamScore": 6,
+      "gameDate": "2023-08-22",
+      "id": 14
+    },
+    {
+      "teamId": 2,
+      "teamScore": 3,
+      "gameDate": "2023-08-22",
+      "id": 15
+    },
+    {
+      "teamId": 3,
+      "teamScore": 9,
+      "gameDate": "2023-08-22",
+      "id": 16
+    },
+    {
+      "teamId": 2,
+      "teamScore": 3,
+      "gameDate": "2023-08-22",
+      "id": 17
+    },
+    {
+      "teamId": 3,
+      "teamScore": 6,
+      "gameDate": "2023-08-22",
+      "id": 18
+    },
+    {
+      "teamId": 1,
+      "teamScore": 9,
+      "gameDate": "2023-08-22",
+      "id": 19
+    },
+    {
+      "teamId": 1,
+      "teamScore": 0,
+      "gameDate": "2023-08-22",
+      "id": 20
+    },
+    {
+      "teamId": 2,
+      "teamScore": 0,
+      "gameDate": "2023-08-22",
+      "id": 21
+    },
+    {
+      "teamId": 3,
+      "teamScore": 0,
+      "gameDate": "2023-08-22",
+      "id": 22
+    },
+    {
+      "teamId": 2,
+      "teamScore": 4,
+      "gameDate": "2023-08-22",
+      "id": 23
+    },
+    {
+      "teamId": 5,
+      "teamScore": 5,
+      "gameDate": "2023-08-22",
+      "id": 24
+    },
+    {
+      "teamId": 1,
+      "teamScore": 11,
+      "gameDate": "2023-08-22",
+      "id": 25
+    },
+    {
+      "teamId": 2,
+      "teamScore": 6,
+      "gameDate": "2023-08-22",
+      "id": 26
+    },
+    {
+      "teamId": 3,
+      "teamScore": 7,
+      "gameDate": "2023-08-22",
+      "id": 27
+    },
+    {
+      "teamId": 1,
+      "teamScore": 5,
+      "gameDate": "2023-08-22",
+      "id": 28
+>>>>>>> main
     }
   ]
 }

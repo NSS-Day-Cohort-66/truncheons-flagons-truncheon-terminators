@@ -159,8 +159,8 @@ const handleSubmitScore = (clickEvent) => {
       postTeamScoreCard1(transientGameState.teams.team1);
       postTeamScoreCard2(transientGameState.teams.team2);
       postTeamScoreCard3(transientGameState.teams.team3);
-      renderLeaderboardHTML();
       renderGameHTML(winnerScreenHTML);
+      renderLeaderboardHTML();
     } else {
       window.alert("Add scores to each team even if zero points");
     }

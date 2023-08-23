@@ -1,3 +1,5 @@
+import { fetchPlayers } from "./Players.js";
+
 export const fetchTeams = async () => {
   const teams = await fetch("http://localhost:8088/teams").then((res) =>
     res.json()
@@ -5,14 +7,16 @@ export const fetchTeams = async () => {
   return teams;
 };
 
-// TODO: COme back here
-
 export const teamsDropdown = async () => {
   const teams = await fetchTeams();
+  const players = await fetchPlayers();
   let html = `<select id="team_choice">
                 <option value="0"> Choose a team...</option>`;
   const teamsArray = teams.map((team) => {
-    return `<option id="team" value="${team.id}"> ${team.name} </option>`;
+    const playersArray = players.filter((player) => player.teamId === team.id);
+    if (playersArray.length < 3) {
+      return `<option id="team" value="${team.id}"> ${team.name} </option>`;
+    }
   });
   html += teamsArray.join("");
   html += `</select>`;
@@ -21,10 +25,14 @@ export const teamsDropdown = async () => {
 
 export const team1Dropdown = async () => {
   const teams = await fetchTeams();
+  const players = await fetchPlayers();
   let html = `<select id="team1_choice">
                 <option value="0"> Choose a team...</option>`;
   const teamsArray = teams.map((team) => {
-    return `<option id="team1" data-name="${team.name}" value="${team.id}"> ${team.name} </option>`;
+    const playersArray = players.filter((player) => player.teamId === team.id);
+    if (playersArray.length === 3) {
+      return `<option id="team1" data-name="${team.name}" value="${team.id}"> ${team.name} </option>`;
+    }
   });
   html += teamsArray.join("");
   html += `</select>`;
@@ -33,28 +41,35 @@ export const team1Dropdown = async () => {
 
 export const team2Dropdown = async () => {
   const teams = await fetchTeams();
+  const players = await fetchPlayers();
   let html = `<select id="team2_choice">
                 <option value="0"> Choose a team...</option>`;
   const teamsArray = teams.map((team) => {
-    return `<option id="team" value="${team.id}"> ${team.name} </option>`;
+    const playersArray = players.filter((player) => player.teamId === team.id);
+    if (playersArray.length === 3) {
+      return `<option id="team1" data-name="${team.name}" value="${team.id}"> ${team.name} </option>`;
+    }
   });
   html += teamsArray.join("");
   html += `</select>`;
   return html;
 };
+
 export const team3Dropdown = async () => {
   const teams = await fetchTeams();
+  const players = await fetchPlayers();
   let html = `<select id="team3_choice">
                 <option value="0"> Choose a team...</option>`;
   const teamsArray = teams.map((team) => {
-    return `<option id="team" value="${team.id}"> ${team.name} </option>`;
+    const playersArray = players.filter((player) => player.teamId === team.id);
+    if (playersArray.length === 3) {
+      return `<option id="team1" data-name="${team.name}" value="${team.id}"> ${team.name} </option>`;
+    }
   });
   html += teamsArray.join("");
   html += `</select>`;
   return html;
 };
-
-
 
 const teamState = {
   name: "",

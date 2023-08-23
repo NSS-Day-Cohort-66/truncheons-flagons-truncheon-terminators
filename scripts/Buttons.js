@@ -140,8 +140,8 @@ export const round2ScoreButton = () => {
   return `<button class="round2Score" id="round2Score">Round 3!</button>`;
 };
 
-const handleSubmitScore = (clickEvent) => {
-  const winnerScreenHTML = winnerScreen();
+const handleSubmitScore = async (clickEvent) => {
+  const winnerScreenHTML = await winnerScreen();
   if (clickEvent.target.id === "save_score") {
     const inputElement1 = document.querySelector('input[name="score1_round3"]');
     const userInput1 = inputElement1.value;
@@ -153,20 +153,25 @@ const handleSubmitScore = (clickEvent) => {
       transientGameState.teams.team1.score += parseInt(userInput1);
       transientGameState.teams.team2.score += parseInt(userInput2);
       transientGameState.teams.team3.score += parseInt(userInput3);
-      generateScoreCard1(transientGameState.teams.team1);
-      generateScoreCard2(transientGameState.teams.team2);
-      generateScoreCard3(transientGameState.teams.team3);
-      postTeamScoreCard1(transientGameState.teams.team1);
-      postTeamScoreCard2(transientGameState.teams.team2);
-      postTeamScoreCard3(transientGameState.teams.team3);
+      await generateScoreCard1(transientGameState.teams.team1);
+      await generateScoreCard2(transientGameState.teams.team2);
+      await generateScoreCard3(transientGameState.teams.team3);
+      await postTeamScoreCard1(transientGameState.teams.team1);
+      await postTeamScoreCard2(transientGameState.teams.team2);
+      await postTeamScoreCard3(transientGameState.teams.team3);
+      const createLeaderboardUpdate = new CustomEvent("postedNewScores");
+      document.dispatchEvent(createLeaderboardUpdate);
       renderGameHTML(winnerScreenHTML);
-      renderLeaderboardHTML();
     } else {
       window.alert("Add scores to each team even if zero points");
     }
     console.log(transientGameState);
   }
 };
+
+document.addEventListener("postedNewScores", (scoresPosted) => {
+  renderLeaderboardHTML();
+});
 
 export const submitScore = () => {
   document.addEventListener("click", handleSubmitScore);

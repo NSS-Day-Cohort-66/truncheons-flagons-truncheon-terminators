@@ -1,7 +1,7 @@
 import { teamsDropdown } from "./Teams.js";
 import { createPlayer } from "./Buttons.js";
 
-const fetchPlayers = async () => {
+export const fetchPlayers = async () => {
   const players = await fetch("http://localhost:8088/players").then((res) =>
     res.json()
   );

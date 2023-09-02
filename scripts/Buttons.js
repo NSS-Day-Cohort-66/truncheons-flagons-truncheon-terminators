@@ -68,7 +68,7 @@ export const playAgain = () => {
 const handleRound1 = (clickEvent) => {
   const tGS = transientGameState.teams;
   if (clickEvent.target.id === "round1") {
-    if (tGS.team1 && tGS.team2 && tGS.team3) {
+    if (tGS.team1.teamId && tGS.team2.teamId && tGS.team3.teamId) {
       if (
         tGS.team1.teamId !== tGS.team2.teamId &&
         tGS.team1.teamId !== tGS.team3.teamId &&
@@ -77,8 +77,10 @@ const handleRound1 = (clickEvent) => {
         const round1HTML = round1();
         renderGameHTML(round1HTML);
       } else {
-        window.alert(`Must chose three teams, and all must be different`);
+        window.alert(`All teams must be different`);
       }
+    } else {
+      window.alert("Must choose three teams");
     }
   }
 };

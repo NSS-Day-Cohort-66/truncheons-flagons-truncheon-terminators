@@ -111,6 +111,20 @@
       "countryOfOrigin": "Bobtonland",
       "teamId": 6,
       "id": 16
+    },
+    {
+      "firstName": "Monir",
+      "lastName": "Madkour",
+      "countryOfOrigin": "United States",
+      "teamId": 6,
+      "id": 17
+    },
+    {
+      "firstName": "Sydni",
+      "lastName": "Gause",
+      "countryOfOrigin": "USA",
+      "teamId": 6,
+      "id": 18
     }
   ],
   "teams": [
@@ -153,6 +167,21 @@
       "name": "Poop",
       "createdDate": "2023-08-23",
       "id": 8
+    },
+    {
+      "name": "Kaka",
+      "createdDate": "2023-08-25",
+      "id": 9
+    },
+    {
+      "name": "triston",
+      "createdDate": "2023-08-26",
+      "id": 10
+    },
+    {
+      "name": "Hannah",
+      "createdDate": "2023-09-01",
+      "id": 11
     }
   ],
   "scores": [
@@ -209,6 +238,6 @@
       "teamScore": 3,
       "gameDate": "2023-08-22",
       "id": 9
-    }
+    }t
   ]
 }
